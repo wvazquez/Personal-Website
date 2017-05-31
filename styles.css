@@ -3,98 +3,86 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+body{
   padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   color: #222;
   background: #f7f5f0;
 }
 /* Link Styles */
-
-a {
+a{
   text-decoration: none;
-  color: #999;
-}
-a:hover {
-  color: #6633ff;
-}
-
-/* Section Styles */
-
-.main-nav {
-  width: 100%;
-  background: black;
-  min-height: 30px;
-  padding: 10px;
-  position: fixed;
-  text-align: center;
-}
-.nav {
-  display: flex;
-  justify-content: space-around;
-  font-weight: 700;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
-}
-.nav .name a{
-  color: white;
-}
-.nav .name a:hover {
-  color: gray;
-}
-.nav li {
-  padding: 5px 10px 10px 10px;
-}
-.nav a {
+  color: #77757c;
   transition: all .5s;
 }
-.nav a:hover {
-  color: white
+ul li a:hover{
+  color: white;
+  /*transform: scale(1.4);*/
+  font-size: 1.4em;
+}
+/* Section Styles */
+nav{
+  width: 100%;
+  padding: 10px;
+  background: black;
+  position: fixed;
+  height: 50px;
+}
+nav ul{
+  display: flex;
+  font-weight: 800;
+  list-style-type: none;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+nav ul li{
+  padding: 5px 10px 10px 10px;
+}
+nav ul .name{
+  margin-right: auto;
+}
+nav ul .name a{
+  color: #fff;
+}
+nav ul .name a:hover{
+  color: firebrick;
 }
 
-header {
-  text-align: center;
+header{
   background: url('images/bg-image.jpg') no-repeat center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
+  line-height: 1.5em;
 }
-header {
-  line-height: 1.5;
-}
-header .profile-image {
+
+header .profile-image{
+  border-radius: 100%;
   margin-top: 50px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 3px white solid;
+  transition: all .5s
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.4) rotate(5deg);
 }
-.tag {
-  background-color: #efefef;
-  color: black;
+
+.tag{
+  background-color: rgba(238, 238, 238,0.5);
   padding: 10px;
   border-radius: 5px;
-  display: table;
   margin: 10px auto;
+  display: table;
 }
 .location {
   background-color: #222;
-  color: yellow;
+  color: firebrick;
 }
-.card {
+
+.card{
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
@@ -103,9 +91,10 @@ header .profile-image:hover {
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
   transition: all .5s;
+  display: inline-block;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: firebrick;
 }
 
 ul.skills {
@@ -116,9 +105,9 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: rgb(118, 149, 164);
   color: white;
-  padding: 5px 10px;
+  padding: 10px 15px;
   margin: 2px;
 }
 
@@ -176,8 +165,8 @@ a.social:hover {
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
 
-  .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
+  .container {
+      display: -ms-flexbox;
       display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
