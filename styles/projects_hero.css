@@ -1,0 +1,11 @@
+header{
+  background: url('../images/bg-projects.jpg') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  line-height: 1.5em;
+}
+header .profile-image{
+    background: rgb(219, 215, 213);
+    border-color: firebrick;
+}
