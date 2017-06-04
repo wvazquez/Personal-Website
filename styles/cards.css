@@ -7,21 +7,19 @@
   border-radius: 6px;
   transition: all .5s;
   display: inline-block;
-
 }
-.homecard{
+.card h2{
+  text-align: center;
+  color: goldenrod;
+}
+.main-card{
   padding: 20px 40px 40px;
 }
-.card:hover {
-  border-color: firebrick;
-}
-
-ul.skills {
+.main-card ul.skills {
   padding: 0;
   text-align: center;
 }
-
-.skills li {
+.main-card .skills li {
   border-radius: 6px;
   display: inline-block;
   background: rgb(118, 149, 164);
@@ -29,7 +27,53 @@ ul.skills {
   padding: 10px 15px;
   margin: 2px;
 }
-
-.skills li:nth-child(odd) {
+.main-card .skills li:nth-child(odd) {
   background: #0399ff;
+}
+.project1{
+  background: url("../images/webbot.png") center no-repeat;
+  background-size: cover;
+}
+.project2{
+  background: url("../images/transition.png") center no-repeat;
+  background-size: cover;
+}
+.project3{
+  background: url("../images/transition.png") center no-repeat;
+  background-size: cover;
+}
+.project4{
+  background: url("../images/transition.png") center no-repeat;
+  background-size: cover;
+}
+.work1{
+  background: url("../images/citibank.svg") center no-repeat;
+  background-size: cover;
+}
+.work2{
+  background: url("../images/devries.jpg") center no-repeat;
+  background-size: cover;
+}
+.work3{
+  background: url("../images/citibank.svg") center no-repeat;
+  background-size: cover;
+}
+.work4{
+  background: url("../images/citibank.svg") center no-repeat;
+  background-size: cover;
+}
+.overlay{
+  width: auto;
+  padding: 20px 40px 40px;
+  border-radius: 6px;
+  color: white;
+  opacity: 0;
+  transition-duration: 0.6s;
+}
+.card:hover {
+  border-color: firebrick;
+}
+.card:hover .overlay{
+  opacity: 1;
+  background-color: rgba(0, 0 ,0, 0.7);
 }
