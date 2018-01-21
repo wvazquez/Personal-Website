@@ -1,34 +1,28 @@
 include partials/head.pug
 link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900")
-link(rel="stylesheet", href="styles/styles.css")
-link(rel="stylesheet", href="styles/navigations.css")
-link(rel="stylesheet", href="styles/hero.css")
-link(rel="stylesheet", href="styles/cards.css")
-link(rel="stylesheet", href="styles/footer.css")
+link(rel="stylesheet", href="styles/app.scss")
 
 body
   include partials/nav.pug
-  header(class="main-hero")
+  header.main-hero
     img(src="images/profile-image.jpg", alt="I am Wilmer Vazquez", class="hero-image")
-    h1(class="tag name") Hello, I’m Wil Vazquez.
-    p(class="tag location") I live in Queens, New York.
+    h1.tag.name Hello, I’m Wil Vazquez.
+    p.tag.location I live in Queens, New York.
 
-
-  div(class="container")
-    div(class="card main-card")
+  div.container
+    div.card.main-card
       h2 Background
       p I’m an aspiring web developer who loves everything about the web. I've lived in New York most of my life and have worked in lots of different jobs. It is a fast paced eviornment that has taught me to always keep learning and moving forward.
       My many hobbies include soccer, drawing, playing the guitar, and spending time with my friends and family. I am an adventurous person that loves the outdoors, but also doesnt mind staying at home watching movies.
 
-    div(class="card main-card")
+    div.card.main-card
       h2 Goals
       p I want to master the process of building web sites and increase my knowledge, skills and abilities in:
-      ul(class="skills")
+      ul.skills
         li HTML
         li CSS
         li JavaScript
         li Ruby
         li PHP
-
       p I’d like to work for a company that is innovative and modern that works hard to create great websites for its clients yet can be fun and molds creativity. I work well in team-oriented projects but can also work well in self-directed projects.
   include partials/footer.pug
