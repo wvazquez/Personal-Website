@@ -1,0 +1,43 @@
+{
+  "name": "wvazquez",
+  "version": "0.0.1",
+  "description": "My personal website to display my projects, skills and experience.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvazquez/Personal-Website.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "projects",
+    "experience",
+    "skills"
+  ],
+  "author": "Wilmer Vazquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvazquez/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/wvazquez/Personal-Website#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.12.1",
+    "gulp-uglify": "^3.0.0",
+    "run-sequence": "^2.2.1"
+  }
+}

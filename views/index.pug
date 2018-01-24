@@ -1,0 +1,27 @@
+include partials/head.pug
+
+
+body
+  include partials/nav.pug
+  header.main-hero
+    img(src="images/profile-image.jpg", alt="I am Wilmer Vazquez", class="hero-image")
+    h1.tag.name Hello, I’m Wil Vazquez.
+    p.tag.location I live in Brooklyn, New York.
+
+  div.container
+    div.card.main-card
+      h2 Background
+      p I’m an aspiring web developer who loves everything about the web. I've lived in New York most of my life and have worked in lots of different jobs. It is a fast paced eviornment that has taught me to always keep learning and moving forward.
+      My many hobbies include soccer, drawing, playing the guitar, and spending time with my friends and family. I am an adventurous person that loves the outdoors, but also doesnt mind staying at home watching movies.
+
+    div.card.main-card
+      h2 Goals
+      p I want to master the process of building web sites and increase my knowledge, skills and abilities in:
+      ul.skills
+        li HTML
+        li CSS
+        li JavaScript
+        li Ruby
+        li PHP
+      p I’d like to work for a company that is innovative and modern that works hard to create great websites for its clients yet can be fun and molds creativity. I work well in team-oriented projects but can also work well in self-directed projects.
+  include partials/footer.pug
