@@ -48,7 +48,7 @@ gulp.task('watch::js', ['minifyScripts'], function (done) {
     done();
 });
 
-gulp.task('build', ['minifyScripts', 'compileSass', 'compilePug'], () => {
+gulp.task('build', ['minifyScripts', 'compileSass', 'compilePug'], (done) => {
   return gulp.src(['images/**'], { base: './'})
         .pipe(gulp.dest('dist'));
 });
@@ -57,11 +57,7 @@ gulp.task('clean', () => {
   del(['dist']);
 });
 
-gulp.task('clean-build', () => {
-  runSequence('clean', 'build');
-});
-
-gulp.task('serve', ['clean-build'], () => {
+gulp.task('serve', ['build'], () => {
     browserSync.init({
         server: "./dist"
     });
@@ -70,6 +66,4 @@ gulp.task('serve', ['clean-build'], () => {
     gulp.watch('js/*', ['watch::js']);
 });
 
-gulp.task('default', () => {
-  gulp.start('serve');
-});
+gulp.task('default', ['serve']);

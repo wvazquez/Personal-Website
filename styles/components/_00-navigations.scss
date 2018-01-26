@@ -4,23 +4,22 @@ nav{
   background: black;
   position: fixed;
   height: 50px;
+  ul{
+    display: flex;
+    font-weight: 800;
+    list-style-type: none;
+    padding-left: 15px;
+    margin: 0 auto;
+    li{
+      padding: 5px 10px 10px 10px;
+    }
+  }
 }
-nav ul{
-  display: flex;
-  font-weight: 800;
-  list-style-type: none;
-  padding-left: 15px;
-  margin: 0 auto;
-}
-nav ul li{
-  padding: 5px 10px 10px 10px;
-}
+
+
 nav ul .name{
   margin-right: auto;
 }
 nav ul .name a{
   color: #fff;
-}
-nav ul .name a:hover{
-  color: firebrick;
 }
