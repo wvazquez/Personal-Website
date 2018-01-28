@@ -1,8 +1,7 @@
 nav {
   width: 100%;
   padding: 10px;
-  background: black;
-  position: fixed;
+  background: rgba(170, 135, 58, 0.6);
   height: 50px; }
   nav ul {
     display: flex;
@@ -13,52 +12,38 @@ nav {
     nav ul li {
       padding: 5px 10px 10px 10px; }
 
-nav ul .name {
+.name {
   margin-right: auto; }
-
-nav ul .name a {
-  color: #fff; }
+  .name a {
+    color: #fff; }
 
 header {
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 60px;
-  line-height: 1.5em; }
+  min-height: 95vh; }
+  header.main-hero {
+    background: url("../images/hero-bg.jpg") no-repeat center;
+    background-size: cover; }
 
-header.main-hero {
-  background: url("../images/bg-image.jpg") no-repeat center;
-  background-size: cover; }
-
-header.experience-hero {
-  background: url("../images/bg-experience.jpg") no-repeat center;
-  background-size: cover; }
-
-header.projects-hero {
-  background: url("../images/bg-projects.jpg") no-repeat center;
-  background-size: cover; }
-
-header .hero-image {
-  border-radius: 100%;
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border: 3px white solid;
-  background: white;
-  /*rgb(219, 215, 213)*/
-  transition: all .5s; }
-
-header .hero-image:hover {
-  transform: scale(1.3) rotate(5deg); }
-
-.tag {
-  background-color: rgba(238, 238, 238, 0.5);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px auto;
-  display: table; }
-
-.location {
-  background-color: #222;
-  color: firebrick; }
+.square {
+  border: 5px solid white;
+  padding: 15px 25px;
+  background-color: rgba(238, 238, 238, 0.5); }
+  .square .tag {
+    font-family: "VT323", monospace;
+    font-size: 45px;
+    background-color: rgba(238, 238, 238, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto; }
+  .square h3 {
+    font-size: 30px; }
+  @media screen and (min-width: 720px) {
+    .square {
+      padding: 100px 150px; } }
 
 .card {
   margin: 30px;
@@ -219,8 +204,6 @@ ul li a:hover {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
-  header {
-    min-height: 470px; }
   .nav {
     max-width: 1200px;
     padding: 0 30px; }

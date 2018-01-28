@@ -3,11 +3,8 @@ include partials/head.pug
 
 body
   include partials/nav.pug
-  header.main-hero
-    img(src="images/profile-image.jpg", alt="I am Wilmer Vazquez", class="hero-image")
-    h1.tag.name Hello, I’m Wil Vazquez.
-    p.tag.location I live in Queens, New York.
-
+  include partials/hero.pug
+  
   div.container
     div.card.main-card
       h2 Background

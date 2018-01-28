@@ -1,42 +1,53 @@
 header{
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 60px;
-  line-height: 1.5em;
+  min-height: 95vh;
+  &.main-hero{
+    background: url('../images/hero-bg.jpg') no-repeat center;
+    background-size: cover;
+  }
 }
-header.main-hero{
-  background: url('../images/bg-image.jpg') no-repeat center;
-  background-size: cover;
-}
-header.experience-hero{
-  background: url('../images/bg-experience.jpg') no-repeat center;
-  background-size: cover;
-}
-header.projects-hero{
-  background: url('../images/bg-projects.jpg') no-repeat center;
-  background-size: cover;
-}
-
-header .hero-image{
-  border-radius: 100%;
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
-  border: 3px white solid;
-  background: white; /*rgb(219, 215, 213)*/;
-  transition: all .5s;
-}
-header .hero-image:hover {
-  transform: scale(1.3) rotate(5deg);
-}
-
-.tag{
+.square{
+  border: 5px solid white;
+  padding: 15px 25px;
   background-color: rgba(238, 238, 238,0.5);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px auto;
-  display: table;
+  .tag{
+    font-family: $font-stack-secondary;
+    font-size: 45px;
+    background-color: rgba(238, 238, 238,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+  }
+  h3{
+    font-size: 30px;
+  }
+  @media screen and (min-width: 720px) {
+      padding: 100px 150px;
+  }
 }
-.location {
-  background-color: #222;
-  color: firebrick;
-}
+
+// header.experience-hero{
+//   background: url('../images/bg-experience.jpg') no-repeat center;
+//   background-size: cover;
+// }
+// header.projects-hero{
+//   background: url('../images/bg-projects.jpg') no-repeat center;
+//   background-size: cover;
+// }
+
+// .hero-image{
+//   border-radius: 100%;
+//   margin-top: 50px;
+//   width: 150px;
+//   height: 150px;
+//   border: 3px white solid;
+//   background: white; /*rgb(219, 215, 213)*/;
+//   transition: all .5s;
+// }
+// header .hero-image:hover {
+//   transform: scale(1.3) rotate(5deg);
+// }
