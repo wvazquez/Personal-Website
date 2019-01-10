@@ -22,7 +22,7 @@ nav ul .name a {
   color: #fff; }
 
 nav ul .name a:hover {
-  color: firebrick; }
+  color: yellow; }
 
 header {
   overflow: hidden;
@@ -63,7 +63,7 @@ header .hero-image:hover {
 
 .location {
   background-color: #222;
-  color: firebrick; }
+  color: yellow; }
 
 .card {
   margin: 30px;
