@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       del = require('del'),
       concat = require('gulp-concat'),
       uglify = require('gulp-uglify'),
+      cleanCSS = require('gulp-clean-css'),
       rename = require('gulp-rename'),
       maps = require('gulp-sourcemaps'),
       pug = require('gulp-pug'),
@@ -17,6 +18,7 @@ function css(done) {
   return gulp.src('styles/app.scss')
         .pipe(maps.init())
         .pipe(sass())
+        .pipe(cleanCSS())
         .pipe(maps.write('./'))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
@@ -35,9 +37,9 @@ function js(done){
   return gulp.src(['js/sticky.js'])
       .pipe(maps.init())
       .pipe(concat('app.js'))
+      .pipe(uglify())
       .pipe(maps.write('./'))
-      .pipe(gulp.dest('dist/js'))
-      ;
+      .pipe(gulp.dest('dist/js'));
       done();
 }
 
@@ -46,24 +48,25 @@ function images(done){
           .pipe(gulp.dest('dist'));
           done();
 }
-function reload(){
-  return browserSync.reload();
+function reload(done){
+  browserSync.reload();
+  done();
 }
 function watch_files(){
   gulp.watch('styles/**/*.scss', css);
   gulp.watch('views/**', html);
-  gulp.watch('js/*', gulp.series(js, reload));
+  gulp.watch('js/**', gulp.series(js, reload));
+  gulp.watch('images/**', images);
 }
 
-function browser_sync(done){
+function browser_sync(){
   browserSync.init({
       server: "./dist/"
   });
-  done();
 }
 
 function clean(done){
-  del(['dist']);
+  return del(['dist']);
   done();
 }
 
@@ -73,5 +76,6 @@ gulp.task("images", images);
 gulp.task("js", js);
 gulp.task('clean', clean);
 
-gulp.task('default', gulp.parallel(css, html, images, js));
-gulp.task('watch', gulp.series(browser_sync, watch_files));
+
+gulp.task('watch', gulp.parallel(browser_sync, watch_files));
+gulp.task('default', gulp.series(clean, gulp.parallel(css, html, images, js)));
