@@ -47,4 +47,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var livereload = require('livereload').createServer({
+  exts: ['js','scss', 'hbs']
+});
+livereload.watch(path.join(__dirname, 'views'));
+livereload.watch(path.join(__dirname, 'public'));
+
 module.exports = app;

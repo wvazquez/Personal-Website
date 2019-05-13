@@ -1,0 +1,22 @@
+header {
+  height: 450px;
+  background: #ccc; }
+  header .logo {
+    height: 50px;
+    width: 50px;
+    background: #999; }
+  header nav a {
+    display: inline-block;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase; }
+    header nav a:hover {
+      color: black; }
+  header h1 {
+    font-size: 72px;
+    font-weight: 700;
+    color: white; }
+
+/*# sourceMappingURL=header.css.map */

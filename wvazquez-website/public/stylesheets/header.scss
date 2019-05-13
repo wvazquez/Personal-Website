@@ -6,7 +6,7 @@ header{
         width: 50px;
         background: #999;
     }
-    .nav{
+    nav{
         a{
             display: inline-block;
             margin-left: 20px;
@@ -14,6 +14,14 @@ header{
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
-        }
+            &:hover{
+                color: rgba(0,0,0,1);
+            }
+        }        
+    }
+    h1{
+        font-size: 72px;
+        font-weight: 700;
+        color: white;
     }
 }
