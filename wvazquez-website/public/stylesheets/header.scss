@@ -2,7 +2,8 @@ header{
     display: flex;
     flex-direction: column;
     height: 450px;
-    background: #ccc;
+    background: url("../images/background-brooklynbridge-2.jpg") center center no-repeat;
+    background-size: cover;
     
     nav{
         .logo{
