@@ -1,3 +1,8 @@
+header .header-content .header-kicker, nav a {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -41,17 +46,13 @@ header {
   .logo:hover {
     border: 1px solid rgba(255, 255, 255, 0.5); }
 
-nav {
-  text-transform: uppercase; }
-  nav a {
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 20px;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 700;
-    font-size: 14px; }
-    nav a:hover {
-      color: black; }
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.5); }
+  nav a:hover {
+    color: black; }
 
 .base-container {
   padding: 20px 40px; }
