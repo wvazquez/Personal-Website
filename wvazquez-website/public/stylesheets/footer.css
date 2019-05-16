@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  align-items: center;
+  background: url("../images/background-brooklynbridge.jpg") top center no-repeat;
+  background-size: cover;
+  height: 150px;
+  color: white; }
+  footer .footer-nav {
+    margin-left: 1.5em;
+    display: flex;
+    flex-direction: column; }
+    footer .footer-nav .copyright {
+      font-size: 0.9em;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 2em; }
+    footer .footer-nav nav a {
+      color: rgba(255, 255, 255, 0.7); }
+      footer .footer-nav nav a:hover {
+        color: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=footer.css.map */
