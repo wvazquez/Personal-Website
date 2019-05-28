@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap');
 section.about{
-    @extend %text-heading-primary;
     text-align: center;
     margin: 0 auto;
     h3{
+        @extend %text-heading-primary;
         color: $color-accent-secondary;
         margin: 100px 0 30px;
     }
@@ -25,6 +26,17 @@ section.about{
             width: 200px!important;
             background: url('../../../images/icon-self.jpg') top center no-repeat;
             background-size: cover;
+        }
+    }
+    .about-desc{
+        font-family: 'Raleway', sans-serif;
+        max-width: 650px;
+        font-size: 1.6em;
+        margin: 50px auto;
+        padding: 15px;
+        font-weight: 100;
+        span{
+            font-weight: 400;
         }
     }
     
