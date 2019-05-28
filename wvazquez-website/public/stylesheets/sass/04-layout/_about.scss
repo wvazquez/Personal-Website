@@ -1,8 +1,10 @@
 section.about{
     @extend %text-heading-primary;
     text-align: center;
+    margin: 0 auto;
     h3{
         color: $color-accent-secondary;
+        margin: 100px 0 30px;
     }
 
     .about-icons{

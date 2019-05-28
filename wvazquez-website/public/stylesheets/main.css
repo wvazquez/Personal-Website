@@ -3,6 +3,11 @@ header .header-content .header-kicker, nav a, section.about {
   font-weight: 700;
   text-transform: uppercase; }
 
+.container {
+  max-width: 1400px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
 header {
   display: flex;
   flex-direction: column;
@@ -58,9 +63,11 @@ nav a {
   padding: 20px 40px; }
 
 section.about {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   section.about h3 {
-    color: #e1c184; }
+    color: #e1c184;
+    margin: 100px 0 30px; }
   section.about .about-icons {
     display: flex;
     align-items: center;
