@@ -20,27 +20,27 @@ module.exports = {
     skills: [
         {
             title: 'Node.js',
-            rating: 5
+            rating: 8
         },
         {
             title: 'Express',
-            rating: 5
+            rating: 7
         },
         {
             title: 'Handlebars',
-            rating: 5
+            rating: 6
         },
         {
             title: 'Javascript',
-            rating: 5
+            rating: 9
         },
         {
             title: 'CSS',
-            rating: 5
+            rating: 9
         },
         {
             title: 'jQuery',
-            rating: 5
+            rating: 7
         },
     ],
 

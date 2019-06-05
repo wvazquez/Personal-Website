@@ -42,17 +42,15 @@ section.about{
     }
     .about-skills{
         max-width: 700px;
-        // background: lightgrey;
         color: #999;
         margin: 100px auto;
 
         .skill-unit{
             .skill-rating{
-                border: 1px solid red;
+                background-color: $bg-color-primary; 
                 div{
                     height: 10px;
-                    background-color: gold;
-                    width: 50%;
+                    background-color: $color-accent-primary;
                 }
             }
         }

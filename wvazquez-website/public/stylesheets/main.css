@@ -400,11 +400,10 @@ section.about {
     color: #999;
     margin: 100px auto; }
     section.about .about-skills .skill-unit .skill-rating {
-      border: 1px solid red; }
+      background-color: #e5eaee; }
       section.about .about-skills .skill-unit .skill-rating div {
         height: 10px;
-        background-color: gold;
-        width: 50%; }
+        background-color: #c99065; }
 
 footer {
   display: flex;
