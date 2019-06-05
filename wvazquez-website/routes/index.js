@@ -4,7 +4,10 @@ const config = require('../config');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {nav: config.nav});
+  res.render('index', {
+                        nav: config.nav,
+                        skills: config.skills  
+                      });
 });
 
 module.exports = router;

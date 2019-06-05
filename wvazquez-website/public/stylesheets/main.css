@@ -304,7 +304,7 @@ template {
 [hidden] {
   display: none; }
 
-header .header-content .header-kicker, nav a, section.about h3 {
+header .header-content .header-kicker, nav a, section.about h2 {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -367,7 +367,7 @@ nav a {
 section.about {
   text-align: center;
   margin: 0 auto; }
-  section.about h3 {
+  section.about h2 {
     color: #e1c184;
     margin: 100px 0 30px; }
   section.about .about-icons {
@@ -395,6 +395,16 @@ section.about {
     font-weight: 100; }
     section.about .about-desc span {
       font-weight: 400; }
+  section.about .about-skills {
+    max-width: 700px;
+    color: #999;
+    margin: 100px auto; }
+    section.about .about-skills .skill-unit .skill-rating {
+      border: 1px solid red; }
+      section.about .about-skills .skill-unit .skill-rating div {
+        height: 10px;
+        background-color: gold;
+        width: 50%; }
 
 footer {
   display: flex;

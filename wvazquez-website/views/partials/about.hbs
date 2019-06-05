@@ -1,6 +1,6 @@
 <section class="about">
     <div class="container">
-        <h3>About Myself</h3>
+        <h2>About Myself</h2>
         <div class="about-icons">
             <div class="about-self"></div>
         </div>
@@ -9,7 +9,19 @@
         </div>
 
         <div class="about-skills">
-
+            {{#each skills}}
+                <div class="skill-unit">
+                    <h3 class="skill-title">{{title}}</h3>
+                    <div class="skill-rating">
+                        {{!-- <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span> --}}
+                        <div></div>
+                    </div>
+                </div>
+            {{/each}}
+            
         </div>
     </div> {{!-- container --}}
 </section>
