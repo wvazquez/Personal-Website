@@ -396,14 +396,22 @@ section.about {
     section.about .about-desc span {
       font-weight: 400; }
   section.about .about-skills {
-    max-width: 700px;
+    max-width: 750px;
     color: #999;
-    margin: 100px auto; }
-    section.about .about-skills .skill-unit .skill-rating {
-      background-color: #e5eaee; }
-      section.about .about-skills .skill-unit .skill-rating div {
-        height: 10px;
-        background-color: #c99065; }
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    section.about .about-skills .skill-unit {
+      text-align: left;
+      width: 350px; }
+      section.about .about-skills .skill-unit .skill-title {
+        margin-bottom: 5px; }
+      section.about .about-skills .skill-unit .skill-rating {
+        background-color: #e5eaee; }
+        section.about .about-skills .skill-unit .skill-rating div {
+          height: 8px;
+          background-color: #c99065; }
 
 footer {
   display: flex;
