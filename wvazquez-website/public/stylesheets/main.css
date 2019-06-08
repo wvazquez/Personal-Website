@@ -310,7 +310,8 @@ header .header-content .header-kicker, nav a, section.about h2 {
   text-transform: uppercase; }
 
 .container {
-  padding: 0 10px;
+  width: 1400px;
+  padding: 10px;
   margin: 0 auto; }
 
 header {
@@ -318,20 +319,20 @@ header {
   flex-direction: column;
   height: 450px;
   background: url("../images/background-brooklynbridge.jpg") center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  color: white; }
   header .header-nav {
     display: flex;
     align-items: center; }
     header .header-nav nav {
       margin-left: auto; }
   header .header-content {
+    margin-top: 40px;
     text-align: center;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-transform: uppercase;
-    color: white; }
+    text-transform: uppercase; }
     header .header-content .header-phrase {
       font-size: 72px;
       font-weight: 700;
@@ -360,7 +361,7 @@ nav a {
   text-decoration: none;
   display: inline-block;
   margin-right: 20px;
-  color: rgba(0, 0, 0, 0.5); }
+  color: white; }
   nav a:hover {
     color: black; }
 
