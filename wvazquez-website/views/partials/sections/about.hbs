@@ -8,16 +8,6 @@
             <p><span>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span> Soluta veniam provident doloremque itaque perspiciatis aspernatur dolorem. Consequatur voluptate iste, tempore provident animi deleniti aspernatur sunt ea illo nam excepturi. Explicabo.</p>
         </div>
 
-        <div class="about-skills">
-            {{#each skills}}
-                <div class="skill-unit">
-                    <h3 class="skill-title">{{title}}</h3>
-                    <div class="skill-rating">
-                        <div style="width: {{multiply rating 10}}%;"></div>
-                    </div>
-                </div>
-            {{/each}}
-            
-        </div>
+        {{> components/skills}}
     </div> {{!-- container --}}
 </section>
