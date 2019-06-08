@@ -1,0 +1,22 @@
+.skills{
+    max-width: 750px;
+    color: #999;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .skill-unit{
+        text-align: left;
+        width:350px;
+        .skill-title{
+            margin-bottom: 5px;
+        }
+        .skill-rating{
+            background-color: $bg-color-primary; 
+            div{
+                height: 8px;
+                background-color: $color-accent-primary;
+            }
+        }
+    }
+}
