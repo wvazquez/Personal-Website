@@ -304,10 +304,15 @@ template {
 [hidden] {
   display: none; }
 
-header .header-content .header-kicker, nav a, section.about h2 {
+section.about h2, .work h2, header .header-content .header-kicker, nav a {
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-align: center; }
+
+section.about h2, .work h2 {
+  color: #e1c184;
+  margin: 100px 0 30px; }
 
 .container {
   width: 1400px;
@@ -334,7 +339,7 @@ header .header-content .header-kicker, nav a, section.about h2 {
 
 header {
   height: 450px;
-  background: url("../images/background-brooklynbridge.jpg") center center no-repeat;
+  background: url("/images/background-brooklynbridge.jpg") center center no-repeat;
   background-size: cover;
   color: white; }
   header .header-nav {
@@ -384,9 +389,6 @@ nav a {
 section.about {
   text-align: center;
   margin: 0 auto; }
-  section.about h2 {
-    color: #e1c184;
-    margin: 100px 0 30px; }
   section.about .about-profile {
     display: flex;
     justify-content: center; }
@@ -405,6 +407,32 @@ section.about {
     font-weight: 100; }
     section.about .about-desc span {
       font-weight: 400; }
+
+.work {
+  background-color: #e5eaee; }
+  .work .projects {
+    display: flex;
+    flex-wrap: wrap; }
+  .work .project-unit {
+    background: grey url("/images/projects/work_1.jpg") center center no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 250px;
+    width: 25%;
+    position: relative;
+    overflow: hidden; }
+    .work .project-unit:hover .project-overlay {
+      top: 0%; }
+    .work .project-unit .project-overlay {
+      background-color: #c99065;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 100%; }
+      .work .project-unit .project-overlay .project-title {
+        color: white;
+        font-weight: 300;
+        text-transform: uppercase; }
 
 footer {
   display: flex;

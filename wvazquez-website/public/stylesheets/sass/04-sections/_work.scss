@@ -1,0 +1,36 @@
+.work{
+    background-color: $bg-color-primary;
+    h2{
+        @extend %text-heading-secondary;
+    }
+    .projects{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .project-unit{
+        background: grey url('/images/projects/work_1.jpg') center center no-repeat;
+        background-size: cover;
+        text-align: center;
+        height: 250px;
+        width: 25%;
+        position: relative;
+        overflow: hidden;
+        &:hover .project-overlay{
+            top: 0%;       
+        }
+        .project-overlay{
+            background-color: $color-accent-primary;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            .project-title{
+                color: white;
+                font-weight: 300;
+                text-transform: uppercase;
+            }
+        }
+        
+    }
+
+}

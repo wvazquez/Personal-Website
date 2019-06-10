@@ -3,9 +3,7 @@ section.about{
     text-align: center;
     margin: 0 auto;
     h2{
-        @extend %text-heading-primary;
-        color: $color-accent-secondary;
-        margin: 100px 0 30px;
+        @extend %text-heading-secondary;
     }
 
     .about-profile{
