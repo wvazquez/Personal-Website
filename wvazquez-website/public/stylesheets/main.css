@@ -424,7 +424,7 @@ section.about {
     .work .project-unit:hover .project-overlay {
       top: 0%; }
     .work .project-unit .project-overlay {
-      background-color: #c99065;
+      background-color: rgba(201, 144, 101, 0.82);
       height: 100%;
       width: 100%;
       position: absolute;

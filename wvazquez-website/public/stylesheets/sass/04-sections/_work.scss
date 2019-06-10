@@ -20,7 +20,7 @@
             top: 0%;       
         }
         .project-overlay{
-            background-color: $color-accent-primary;
+            background-color: transparentize($color-accent-primary, 0.18);
             height: 100%;
             width: 100%;
             position: absolute;
