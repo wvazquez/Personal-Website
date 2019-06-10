@@ -428,10 +428,15 @@ section.about {
       height: 100%;
       width: 100%;
       position: absolute;
-      top: 100%; }
+      top: 100%;
+      transition: top 0.25s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
       .work .project-unit .project-overlay .project-title {
         color: white;
-        font-weight: 300;
+        font-weight: 100;
         text-transform: uppercase; }
 
 footer {
