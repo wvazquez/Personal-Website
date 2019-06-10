@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
                           multiply : function(a, b) { return a * b; }
                         },
                         nav: config.nav,
-                        skills: config.skills  
+                        skills: config.skills,
+                        projects: config.projects  
                       });
 });
 

@@ -43,5 +43,31 @@ module.exports = {
             rating: 7
         },
     ],
+    projects: [
+        {
+            title: 'Sample project',
+            folder: 'project-1'
+        },
+        {
+            title: 'Sample project',
+            folder: 'project-2'
+        },
+        {
+            title: 'Sample project',
+            folder: 'project-3'
+        },
+        {
+            title: 'Sample project',
+            folder: 'project-4'
+        },
+        {
+            title: 'Sample project',
+            folder: 'project-5'
+        },
+        {
+            title: 'Sample project',
+            folder: 'project-6'
+        },
+    ]
 
 };

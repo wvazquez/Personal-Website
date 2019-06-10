@@ -6,9 +6,10 @@
     .projects{
         display: flex;
         flex-wrap: wrap;
+        font-family: $font-family-primary;
     }
     .project-unit{
-        background: grey url('/images/projects/work_1.jpg') center center no-repeat;
+        // background: grey center center no-repeat;
         background-size: cover;
         text-align: center;
         height: 250px;

@@ -2,54 +2,15 @@
     <div class="container">
         <h2>Work</h2>
         <div class="projects">
-            <div class="project-unit">
+            {{#each projects}}
+            <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
                 <div class="project-overlay">
-                    <span class="project-title">Sample project</span>
+                    <span class="project-title">{{title}}</span>
                     <span>icon</span>
                 </div>
             </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <span class="project-title">Sample project</span>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
-            <div class="project-unit">
-                <div class="project-overlay">
-                    <strong class="project-title">Sample project</strong>
-                    <span>icon</span>
-                </div>
-            </div>
+            {{/each}}
+            
         </div>
     </div>
 
