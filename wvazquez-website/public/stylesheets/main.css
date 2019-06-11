@@ -413,10 +413,13 @@ section.about {
   overflow-x: hidden; }
   .work .projects {
     width: 200%;
-    display: flex; }
+    display: flex;
+    position: relative; }
     .work .projects .project-container {
       width: 50%;
-      position: relative; }
+      position: relative;
+      transition: left 1s;
+      left: 0%; }
     .work .projects .project-thumbnails {
       display: flex;
       flex-wrap: wrap;
