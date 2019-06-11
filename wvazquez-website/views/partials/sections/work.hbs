@@ -1,17 +1,35 @@
 <section class="work">
-    <div class="container">
-        <h2>Work</h2>
-        <div class="projects">
-            {{#each projects}}
-            <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
-                <div class="project-overlay">
-                    <span class="project-title">{{title}}</span>
-                    <div class="icon"></div>
+    <h2>Work</h2>
+    <div class="projects">
+        
+        <div class="project-container">
+            <div class="project-thumbnails container">
+                {{#each projects}}
+                <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
+                    <div class="project-overlay">
+                        <h3 class="title">{{title}}</h3>
+                        <div class="icon"></div>
+                    </div>
                 </div>
-            </div>
-            {{/each}}
+                {{/each}}
             
+            </div>
         </div>
+        
+        <div class="project-container">
+            <div class="project-overview">
+                <div class="project-header">
+                    <img class="back-arrow" src="/images/icons/back-arrow.svg" />
+                    <h3>Title</h3>
+                </div>
+                
+                <div class="project-content"></div>
+                <p>description</p>
+        </div>
+
+        </div>
+
+        
     </div>
 
 </section>

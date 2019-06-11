@@ -1,9 +1,21 @@
 .work{
     background-color: $bg-color-primary;
+    overflow-x: hidden;
     h2{
         @extend %text-heading-secondary;
     }
     .projects{
+        
+        width: 200%;
+        display: flex;
+        position: relative;
+    }
+    .project-container{
+        width: 50%;
+        position: relative;
+        // left:-50%;
+    }
+    .project-thumbnails{
         display: flex;
         flex-wrap: wrap;
         font-family: $font-family-primary;
@@ -20,6 +32,7 @@
             top: 0%;       
         }
         .project-overlay{
+            cursor: pointer;
             background-color: transparentize($color-accent-primary, 0.18);
             height: 100%;
             width: 100%;
@@ -30,7 +43,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            .project-title{
+            .title{
                 color: white;
                 font-weight: 100;
                 text-transform: uppercase;
@@ -45,4 +58,26 @@
         
     }
 
+}
+
+.project-overview{
+    background: olivedrab;
+    .project-header{
+        display: flex;
+        align-items: center;
+        background: red;
+    }
+    .back-arrow{
+        margin-right: 25px;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .project-content{
+        height: 300px;
+        width: 300px;
+        background: darkgray;
+        
+    }
 }
