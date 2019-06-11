@@ -413,27 +413,26 @@ section.about {
   overflow-x: hidden; }
   .work .projects {
     width: 200%;
-    display: flex;
-    position: relative; }
-  .work .project-container {
-    width: 50%;
-    position: relative; }
-  .work .project-thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Raleway", sans-serif; }
-  .work .project-unit {
-    background-size: cover;
-    text-align: center;
-    height: 250px;
-    width: 25%;
-    position: relative;
-    overflow: hidden; }
-    .work .project-unit:hover .project-overlay {
-      top: 0%; }
-    .work .project-unit .project-overlay {
-      cursor: pointer;
+    display: flex; }
+    .work .projects .project-container {
+      width: 50%;
+      position: relative; }
+    .work .projects .project-thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      font-family: "Raleway", sans-serif; }
+    .work .projects .project-unit {
+      background-size: cover;
+      text-align: center;
+      height: 250px;
+      width: 25%;
+      position: relative;
+      overflow: hidden; }
+      .work .projects .project-unit:hover .project-overlay {
+        top: 0%; }
+    .work .projects .project-overlay {
       background-color: rgba(201, 144, 101, 0.82);
+      cursor: pointer;
       height: 100%;
       width: 100%;
       position: absolute;
@@ -443,31 +442,30 @@ section.about {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .work .project-unit .project-overlay .title {
+      .work .projects .project-overlay .title {
         color: white;
         font-weight: 100;
         text-transform: uppercase; }
-      .work .project-unit .project-overlay .icon {
+      .work .projects .project-overlay .icon {
         margin-top: 20px;
         background: url("/images/icons/view-more.svg") center center no-repeat;
         height: 25px;
         width: 25px; }
-
-.project-overview {
-  background: olivedrab; }
-  .project-overview .project-header {
-    display: flex;
-    align-items: center;
-    background: red; }
-  .project-overview .back-arrow {
-    margin-right: 25px;
-    height: 30px;
-    width: 30px;
-    cursor: pointer; }
-  .project-overview .project-content {
-    height: 300px;
-    width: 300px;
-    background: darkgray; }
+    .work .projects .project-overview {
+      background: olivedrab; }
+      .work .projects .project-overview .project-header {
+        display: flex;
+        align-items: center;
+        background: red; }
+      .work .projects .project-overview .back-arrow {
+        margin-right: 25px;
+        height: 30px;
+        width: 30px;
+        cursor: pointer; }
+      .work .projects .project-overview .project-content {
+        height: 300px;
+        width: 300px;
+        background: darkgray; }
 
 footer {
   display: flex;

@@ -4,36 +4,110 @@
     h2{
         @extend %text-heading-secondary;
     }
-    .projects{
+//     .projects{
         
+//         width: 200%;
+//         display: flex;
+//         .project-container{
+//             width: 50%;
+//             position: relative;
+            
+//             &-thumbnails{
+//                 display: flex;
+//                 flex-wrap: wrap;
+//                 font-family: $font-family-primary;
+//             }
+//         }
+//     }
+    
+    
+//     .project-unit{
+//         // background: grey center center no-repeat;
+//         background-size: cover;
+//         text-align: center;
+//         height: 250px;
+//         width: 25%;
+//         position: relative;
+//         overflow: hidden;
+//         &:hover .project-overlay{
+//             top: 0%;       
+//         }
+//         .project-overlay{
+//             cursor: pointer;
+//             background-color: transparentize($color-accent-primary, 0.18);
+//             height: 100%;
+//             width: 100%;
+//             position: absolute;
+//             top: 100%;
+//             transition: top 0.25s;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//             .title{
+//                 color: white;
+//                 font-weight: 100;
+//                 text-transform: uppercase;
+//             }
+//             .icon{
+//                 margin-top: 20px;
+//                 background: url('/images/icons/view-more.svg') center center no-repeat;
+//                 height: 25px;
+//                 width: 25px;
+//             }
+//         }
+        
+//     }
+
+// }
+
+// .project-overview{
+    // background: olivedrab;
+    // .project-header{
+    //     display: flex;
+    //     align-items: center;
+    //     background: red;
+    // }
+    // .back-arrow{
+    //     margin-right: 25px;
+    //     height: 30px;
+    //     width: 30px;
+    //     cursor: pointer;
+    // }
+
+    // .project-content{
+    //     height: 300px;
+    //     width: 300px;
+    //     background: darkgray;
+        
+    // }
+    .projects{
         width: 200%;
         display: flex;
-        position: relative;
-    }
-    .project-container{
-        width: 50%;
-        position: relative;
-        // left:-50%;
-    }
-    .project-thumbnails{
-        display: flex;
-        flex-wrap: wrap;
-        font-family: $font-family-primary;
-    }
-    .project-unit{
-        // background: grey center center no-repeat;
-        background-size: cover;
-        text-align: center;
-        height: 250px;
-        width: 25%;
-        position: relative;
-        overflow: hidden;
-        &:hover .project-overlay{
-            top: 0%;       
-        }
-        .project-overlay{
-            cursor: pointer;
+        .project{
+          &-container{
+              width: 50%;
+              position: relative;
+          }    
+          &-thumbnails{
+              display: flex;
+              flex-wrap: wrap;
+              font-family: $font-family-primary;
+          }
+          &-unit{
+            background-size: cover;
+            text-align: center;
+            height: 250px;
+            width: 25%;
+            position: relative;
+            overflow: hidden;
+            &:hover .project-overlay{
+                top: 0%;       
+            }
+          }
+          &-overlay{
             background-color: transparentize($color-accent-primary, 0.18);
+            cursor: pointer;
             height: 100%;
             width: 100%;
             position: absolute;
@@ -54,30 +128,28 @@
                 height: 25px;
                 width: 25px;
             }
+          }
+          &-overview{
+            background: olivedrab;
+            .project-header{
+                display: flex;
+                align-items: center;
+                background: red;
+            }
+            .back-arrow{
+                margin-right: 25px;
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+            }
+        
+            .project-content{
+                height: 300px;
+                width: 300px;
+                background: darkgray;
+                
+            }
+          }
         }
-        
-    }
-
-}
-
-.project-overview{
-    background: olivedrab;
-    .project-header{
-        display: flex;
-        align-items: center;
-        background: red;
-    }
-    .back-arrow{
-        margin-right: 25px;
-        height: 30px;
-        width: 30px;
-        cursor: pointer;
-    }
-
-    .project-content{
-        height: 300px;
-        width: 300px;
-        background: darkgray;
-        
     }
 }
