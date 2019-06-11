@@ -5,6 +5,7 @@
         @extend %text-heading-secondary;
     }
     .projects{
+        font-family: $font-family-primary;
         width: 200%;
         display: flex;
         position: relative; //required to allow transition:left on project-container animation.
@@ -18,7 +19,6 @@
           &-thumbnails{
               display: flex;
               flex-wrap: wrap;
-              font-family: $font-family-primary;
           }
           &-unit{
             background-size: cover;
@@ -56,11 +56,16 @@
             }
           }
           &-overview{
-            background: olivedrab;
+            h3{
+                color: $color-accent-primary;
+                font-weight: 300;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+            background: white;
             .project-header{
                 display: flex;
                 align-items: center;
-                background: red;
             }
             .back-arrow{
                 margin-right: 25px;

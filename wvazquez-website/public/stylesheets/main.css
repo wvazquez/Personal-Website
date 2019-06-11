@@ -412,6 +412,7 @@ section.about {
   background-color: #e5eaee;
   overflow-x: hidden; }
   .work .projects {
+    font-family: "Raleway", sans-serif;
     width: 200%;
     display: flex;
     position: relative; }
@@ -422,8 +423,7 @@ section.about {
       left: 0%; }
     .work .projects .project-thumbnails {
       display: flex;
-      flex-wrap: wrap;
-      font-family: "Raleway", sans-serif; }
+      flex-wrap: wrap; }
     .work .projects .project-unit {
       background-size: cover;
       text-align: center;
@@ -455,11 +455,15 @@ section.about {
         height: 25px;
         width: 25px; }
     .work .projects .project-overview {
-      background: olivedrab; }
+      background: white; }
+      .work .projects .project-overview h3 {
+        color: #c99065;
+        font-weight: 300;
+        font-size: 24px;
+        text-transform: uppercase; }
       .work .projects .project-overview .project-header {
         display: flex;
-        align-items: center;
-        background: red; }
+        align-items: center; }
       .work .projects .project-overview .back-arrow {
         margin-right: 25px;
         height: 30px;
