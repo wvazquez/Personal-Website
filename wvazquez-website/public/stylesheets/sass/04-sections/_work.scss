@@ -59,7 +59,7 @@
             h3{
                 color: $color-accent-primary;
                 font-weight: 300;
-                font-size: 24px;
+                font-size: 30px;
                 text-transform: uppercase;
             }
             background: white;
@@ -69,9 +69,15 @@
             }
             .back-arrow{
                 margin-right: 25px;
-                height: 30px;
-                width: 30px;
+                height: 40px;
+                width: 40px;
                 cursor: pointer;
+                filter: opacity(75%);
+                // background: url('/images/icons/back-arrow.svg');
+                &:hover{
+                    filter: opacity(100%);
+                }
+                
             }
         
             .project-content{

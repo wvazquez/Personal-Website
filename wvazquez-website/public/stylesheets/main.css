@@ -459,16 +459,19 @@ section.about {
       .work .projects .project-overview h3 {
         color: #c99065;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 30px;
         text-transform: uppercase; }
       .work .projects .project-overview .project-header {
         display: flex;
         align-items: center; }
       .work .projects .project-overview .back-arrow {
         margin-right: 25px;
-        height: 30px;
-        width: 30px;
-        cursor: pointer; }
+        height: 40px;
+        width: 40px;
+        cursor: pointer;
+        filter: opacity(75%); }
+        .work .projects .project-overview .back-arrow:hover {
+          filter: opacity(100%); }
       .work .projects .project-overview .project-content {
         height: 300px;
         width: 300px;
