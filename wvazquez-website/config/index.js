@@ -51,24 +51,20 @@ module.exports = {
             assets: [
                 {
                     title: 'asset 1',
-                    src: 'mysrc',
+                    src: '/images/work/project-1/proj-1-1.jpg',
                     desc: 'description for asset 1'
                 },
                 {
                     title: 'asset 2',
-                    src: 'mysrc',
+                    src: '/images/work/project-1/proj-1-2.jpg',
                     desc: 'description for asset 2'
                 },
                 {
                     title: 'asset 3',
-                    src: 'mysrc',
+                    src: '/images/work/project-1/proj-1-3.jpg',
                     desc: 'description for asset 3'
                 },
-                {
-                    title: 'asset 4',
-                    src: 'mysrc',
-                    desc: 'description for asset 4'
-                },
+                
             ]
         },
         {
@@ -77,9 +73,19 @@ module.exports = {
             bg_image:'',
             assets: [
                 {
-                    title: '',
-                    src: '',
-                    desc: ''
+                    title: 'asset 1',
+                    src: '/images/work/project-2/proj-2-1.jpg',
+                    desc: 'description for asset 1'
+                },
+                {
+                    title: 'asset 2',
+                    src: '/images/work/project-2/proj-2-2.jpg',
+                    desc: 'description for asset 2'
+                },
+                {
+                    title: 'asset 3',
+                    src: '/images/work/project-2/proj-2-3.jpg',
+                    desc: 'description for asset 3'
                 },
             ]
         },

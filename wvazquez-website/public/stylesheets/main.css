@@ -468,7 +468,8 @@ section.about {
       .work .projects .project-overview .project-header {
         display: flex;
         align-items: center;
-        margin-left: -32%; }
+        align-self: flex-start;
+        margin-left: 5%; }
       .work .projects .project-overview .back-arrow {
         margin-right: 25px;
         height: 40px;
@@ -478,8 +479,7 @@ section.about {
         .work .projects .project-overview .back-arrow:hover {
           filter: opacity(100%); }
       .work .projects .project-overview .project-content {
-        height: 300px;
-        width: 300px;
+        max-width: 100%;
         background: darkgray; }
 
 footer {
