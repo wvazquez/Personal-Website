@@ -454,7 +454,12 @@ section.about {
         height: 25px;
         width: 25px; }
     .work .projects .project-overview {
-      background: white; }
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: white;
+      max-width: 75%; }
       .work .projects .project-overview h3 {
         color: #c99065;
         font-weight: 300;
@@ -462,7 +467,8 @@ section.about {
         text-transform: uppercase; }
       .work .projects .project-overview .project-header {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        margin-left: -32%; }
       .work .projects .project-overview .back-arrow {
         margin-right: 25px;
         height: 40px;

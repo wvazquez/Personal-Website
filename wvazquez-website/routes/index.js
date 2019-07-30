@@ -14,4 +14,15 @@ router.get('/', function(req, res, next) {
                       });
 });
 
+router.get('/projects/:projectID', (req,res)=>{
+    const allprojects = config.projects;
+    var project = allprojects.find((project, i) => {
+      if(project.folder === req.params.projectID){
+        return project;
+      };
+    });
+    res.send(JSON.stringify(project));
+})
+
+
 module.exports = router;

@@ -45,28 +45,76 @@ module.exports = {
     ],
     projects: [
         {
-            title: 'Sample project',
-            folder: 'project-1'
+            title: 'Sample project 1',
+            folder: 'project-1',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
         {
-            title: 'Sample project',
-            folder: 'project-2'
+            title: 'Sample project 2',
+            folder: 'project-2',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
         {
-            title: 'Sample project',
-            folder: 'project-3'
+            title: 'Sample project 3',
+            folder: 'project-3',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
         {
-            title: 'Sample project',
-            folder: 'project-4'
+            title: 'Sample project 4',
+            folder: 'project-4',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
         {
-            title: 'Sample project',
-            folder: 'project-5'
+            title: 'Sample project 5',
+            folder: 'project-5',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
         {
-            title: 'Sample project',
-            folder: 'project-6'
+            title: 'Sample project 6',
+            folder: 'project-6',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
         },
     ]
 
