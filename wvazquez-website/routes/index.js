@@ -21,7 +21,7 @@ router.get('/projects/:projectID', (req,res)=>{
         return project;
       };
     });
-    res.send(JSON.stringify(project));
+    res.json(project);
 })
 
 
