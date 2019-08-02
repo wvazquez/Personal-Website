@@ -20,6 +20,10 @@ $( document ).ready(function() {
 
 function setProjectOverview(data){
     $('#overview-title').text(data.title);
+    $('#overview-link').attr('href', data.url)
+    // $('<a/>',{
+    //     text: "Visit Website"
+    // }).attr('href', data.url);
     const $content = $('.project-content');
     $content.html(""); //removes previously loaded data.
     data.assets.forEach(asset => {

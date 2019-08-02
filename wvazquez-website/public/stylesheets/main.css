@@ -1,11 +1,14 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap");
+* {
+  box-sizing: border-box; }
+
 /* Document
    ========================================================================== */
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -304,7 +307,7 @@ template {
 [hidden] {
   display: none; }
 
-section.about h2, .work h2, header .header-content .header-kicker, nav a {
+section.about h2, .work h2, .header-container .header-nav nav a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -316,7 +319,10 @@ section.about h2, .work h2 {
 
 .container {
   max-width: 1400px;
-  padding: 10px; }
+  padding: 10px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%; }
 
 .skills {
   max-width: 750px;
@@ -336,54 +342,55 @@ section.about h2, .work h2 {
         height: 8px;
         background-color: #c99065; }
 
-header {
-  height: 450px;
-  background: url("/images/background-brooklynbridge.jpg") center center no-repeat;
-  background-size: cover;
+.header {
+  height: 80vh;
+  background-color: black;
   color: white; }
-  header .header-nav {
+  .header-container {
     display: flex;
-    align-items: center; }
-    header .header-nav nav {
-      margin-left: auto; }
-  header .header-content {
-    margin-top: 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-transform: uppercase; }
-    header .header-content .header-phrase {
-      font-size: 72px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      margin-bottom: 20px; }
-      header .header-content .header-phrase span {
-        display: inline-block;
-        padding: 0.2em 0.5em;
-        border: solid white 10px; }
-    header .header-content .header-kicker {
-      letter-spacing: 0.05em;
-      line-height: 1; }
-
-.logo {
-  height: 50px;
-  width: 50px;
-  background: url("../images/Logo.png") center center;
-  background-size: cover;
-  background-position: center;
-  border-radius: 100%;
-  box-sizing: border-box; }
-  .logo:hover {
-    border: 1px solid rgba(255, 255, 255, 0.5); }
-
-nav a {
-  text-decoration: none;
-  display: inline-block;
-  margin-right: 20px;
-  color: white; }
-  nav a:hover {
-    color: black; }
+    flex-direction: column; }
+    .header-container .header-nav {
+      flex: 1;
+      display: flex;
+      align-items: center; }
+      .header-container .header-nav .logo {
+        height: 50px;
+        width: 50px;
+        background: url("../images/Logo.png") center center;
+        background-size: cover;
+        background-position: center;
+        border-radius: 100%;
+        box-sizing: border-box; }
+        .header-container .header-nav .logo:hover {
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          cursor: pointer; }
+      .header-container .header-nav nav {
+        margin-left: auto; }
+        .header-container .header-nav nav a {
+          text-decoration: none;
+          display: inline-block;
+          margin-right: 20px;
+          color: white; }
+          .header-container .header-nav nav a:hover {
+            color: #e1c184; }
+    .header-container .header-content {
+      flex: 10;
+      display: flex;
+      flex-direction: column; }
+      .header-container .header-content .header-phrase {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        flex: 1;
+        margin: 0 auto;
+        max-width: 50%;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin-bottom: 20px; }
+        .header-container .header-content .header-phrase .keywords {
+          color: #e1c184; }
 
 section.about {
   text-align: center;
@@ -469,7 +476,8 @@ section.about {
         display: flex;
         align-items: center;
         align-self: flex-start;
-        margin-left: 5%; }
+        margin-left: 5%;
+        flex-wrap: wrap; }
       .work .projects .project-overview .back-arrow {
         margin-right: 25px;
         height: 40px;
@@ -478,6 +486,9 @@ section.about {
         filter: opacity(75%); }
         .work .projects .project-overview .back-arrow:hover {
           filter: opacity(100%); }
+      .work .projects .project-overview #overview-link {
+        flex-basis: 100%;
+        margin-left: 10%; }
       .work .projects .project-overview .project-content {
         max-width: 100%;
         background: darkgray; }

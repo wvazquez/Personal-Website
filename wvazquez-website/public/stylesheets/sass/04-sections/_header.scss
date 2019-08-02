@@ -1,70 +1,77 @@
-header{
-    // display: flex;
-    // flex-direction: column;
-    height: 450px;
-    background: url("/images/background-brooklynbridge.jpg") center center no-repeat;
-    background-size: cover;
+.header{
+    height: 80vh;
+    background-color: black;
     color: white;
-    .header-nav{
-        display: flex;
-        align-items: center;
-        // width: 100%;
-        nav{
-            margin-left: auto;
-        }
-    }
-
-    .header-content{
-        margin-top: 40px;
-        text-align: center;        
+    $h: &;
+    &-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        text-transform: uppercase;
-        .header-phrase{
-            font-size: 72px;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            margin-bottom: 20px;
-            span{
-                display: inline-block;
-                padding: 0.2em 0.5em;
-                border: solid white 10px;
+        #{$h}-nav{
+            flex:1;
+            display: flex;
+            align-items: center;
+            .logo{
+                height: 50px;
+                width: 50px;
+                background: url("../images/Logo.png") center center;
+                background-size: cover;
+                background-position: center;
+                border-radius: 100%;
+                box-sizing: border-box;
+                &:hover{
+                    border: 1px solid rgba(255,255,255,0.5);
+                    cursor: pointer;
+                }
+            }
+            nav{
+                margin-left: auto;
+                a{
+                    @extend %text-heading-primary;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-right: 20px;
+                    color: white;
+                    &:hover{
+                        color: $color-accent-secondary;
+                    }
+                }        
             }
         }
-        .header-kicker{
-            letter-spacing: 0.05em;
-            line-height: 1;
-            @extend %text-heading-primary;
+        #{$h}-content{
+            flex:10;
+            display: flex;
+            flex-direction: column;
+            #{$h}-phrase{
+                display:flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                flex: 1;
+                margin: 0 auto;
+                max-width: 50%;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: 0.05em;
+                margin-bottom: 20px;
+                .keywords{
+                    color: $color-accent-secondary;
+                }
+                
+            }
+            // .header-kicker{
+                // flex: 1;
+                // transform: rotate(-90deg);
+                // transform-origin: 100% 190%;
+                // display: inline-block;
+                // writing-mode: vertical-rl;
+                // text-orientation: mixed;
+                // letter-spacing: 0.05em;
+                // line-height: 1;
+                // font-size: 14px;
+                // font-weight: 700;
+                // text-transform: uppercase;
+                // color: $color-accent-secondary;
+            // }
         }
     }
 }
-
-.logo{
-    height: 50px;
-    width: 50px;
-    background: url("../images/Logo.png") center center;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100%;
-    box-sizing: border-box;
-    &:hover{
-        border: 1px solid rgba(255,255,255,0.5);
-    }
-}
-
-
-nav{
-
-    a{
-        @extend %text-heading-primary;
-        text-decoration: none;
-        display: inline-block;
-        margin-right: 20px;
-        color: white;
-        &:hover{
-            color: rgba(0,0,0,1);
-        }
-    }        
-}
-  

@@ -48,6 +48,7 @@ module.exports = {
             title: 'Sample project 1',
             folder: 'project-1',
             bg_image:'',
+            url: 'http://www.google.com',
             assets: [
                 {
                     title: 'asset 1',
@@ -71,6 +72,7 @@ module.exports = {
             title: 'Sample project 2',
             folder: 'project-2',
             bg_image:'',
+            url: 'http://www.amazon.com',
             assets: [
                 {
                     title: 'asset 1',
@@ -93,6 +95,7 @@ module.exports = {
             title: 'Sample project 3',
             folder: 'project-3',
             bg_image:'',
+            url: 'http://www.facebook.com',
             assets: [
                 {
                     title: 'asset 1',
