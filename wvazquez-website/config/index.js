@@ -2,11 +2,11 @@ module.exports = {
     nav : [
         {
             title: 'About Me',
-            url: '/',
+            url: '#about',
         },
         {
             title: 'Work',
-            url: '/',
+            url: '#work',
         },
         {
             title: 'Clients',

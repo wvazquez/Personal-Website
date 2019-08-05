@@ -15,6 +15,8 @@ $( document ).ready(function() {
         $('.project-container').css('left', 0);
     });
 
+    
+    smoothScroll();
 
 });
 
@@ -37,4 +39,21 @@ function setProjectOverview(data){
           }).appendTo($content);
     });
     
+}
+
+function smoothScroll () {
+    let duration = 300;
+    
+	$('nav a[href^="#"]').on('click', function(event) {
+
+        var link = $( $(this).attr('href') );
+        
+
+	    if( link.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: link.offset().top
+	        }, duration);
+	    }
+	});
 }
