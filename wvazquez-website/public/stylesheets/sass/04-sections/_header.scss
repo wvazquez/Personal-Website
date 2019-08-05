@@ -38,23 +38,24 @@
             }
         }
         #{$h}-content{
+            align-self: center;
             flex:10;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 55%;
             #{$h}-phrase{
-                display:flex;
-                flex-wrap: wrap;
-                align-items: center;
-                width: 100%;
-                flex: 1;
-                margin: 0 auto;
-                max-width: 50%;
+                // font-family: 'Caveat', cursive; 
+                font-family: 'Cabin Sketch', cursive; 
+                font-weight: 400;
                 font-size: 40px;
                 font-weight: 700;
                 letter-spacing: 0.05em;
                 margin-bottom: 20px;
-                .keywords{
+                .keywords{                    
                     color: $color-accent-secondary;
+                    font-weight: 700;
                 }
                 
             }

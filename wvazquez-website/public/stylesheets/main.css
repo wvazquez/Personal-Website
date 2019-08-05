@@ -1,5 +1,6 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Caveat:400,700&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -374,23 +375,23 @@ section.about h2, .work h2 {
           .header-container .header-nav nav a:hover {
             color: #e1c184; }
     .header-container .header-content {
+      align-self: center;
       flex: 10;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 55%; }
       .header-container .header-content .header-phrase {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 100%;
-        flex: 1;
-        margin: 0 auto;
-        max-width: 50%;
+        font-family: 'Cabin Sketch', cursive;
+        font-weight: 400;
         font-size: 40px;
         font-weight: 700;
         letter-spacing: 0.05em;
         margin-bottom: 20px; }
         .header-container .header-content .header-phrase .keywords {
-          color: #e1c184; }
+          color: #e1c184;
+          font-weight: 700; }
 
 section.about {
   text-align: center;
