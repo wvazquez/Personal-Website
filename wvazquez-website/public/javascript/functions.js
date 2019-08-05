@@ -6,6 +6,7 @@ $( document ).ready(function() {
         $.get(`/projects/${projectID}`, (data)=>{
             setProjectOverview(data);
             console.log(data);
+            $('.project-overview').show(100);
             $('.project-container').css('left', '-50%');
         });
         
@@ -13,6 +14,7 @@ $( document ).ready(function() {
 
     $('.back-arrow').on('click', ()=>{
         $('.project-container').css('left', 0);
+        $('.project-overview').fadeOut(700);
     });
 
     

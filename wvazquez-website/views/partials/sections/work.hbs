@@ -5,16 +5,15 @@
         <div class="project-container">
             <div class="project-thumbnails container">
                 {{#each projects}}
-                <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
-                    <div class="project-overlay" id="{{folder}}">
-                        <h3 class="title">{{title}}</h3>
-                        <div class="icon"></div>
+                    <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
+                        <div class="project-overlay" id="{{folder}}">
+                            <h3 class="title">{{title}}</h3>
+                            <div class="icon"></div>
+                        </div>
                     </div>
-                </div>
                 {{/each}}
-            
-            </div>
-        </div>
+            </div> {{!-- /project-thumbnail /container --}}
+        </div> {{!-- /project-container --}}
         
         <div class="project-container">
             <div class="container">
@@ -26,16 +25,17 @@
                     </div>
                     
                     <div class="project-content">
-                        {{!-- <img>
-                        <p></p> --}}
+                        {{!-- 
+
+                        <img>
+                        <p></p> 
+
+                        --}}
                     </div>
-                    
-                </div>
-        </div>
-
-        </div>
-
-        
-    </div>
+                </div> {{!-- /project-overview --}}
+            </div> {{!-- /container --}}
+        </div> {{!-- /project-container --}}  
+    </div> {{!-- /projects --}}
+    
 
 </section>

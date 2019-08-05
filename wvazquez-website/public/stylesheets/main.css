@@ -422,7 +422,8 @@ section.about {
     font-family: "Raleway", sans-serif;
     width: 200%;
     display: flex;
-    position: relative; }
+    position: relative;
+    align-items: flex-start; }
     .work .projects .project-container {
       width: 50%;
       position: relative;
