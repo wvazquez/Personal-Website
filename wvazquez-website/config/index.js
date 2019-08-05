@@ -19,29 +19,30 @@ module.exports = {
     ],
     skills: [
         {
-            title: 'Node.js',
+            title: 'Programming',
             rating: 8
         },
         {
-            title: 'Express',
+            title: 'Communication',
+            rating: 8
+        },
+        {
+            title: 'UI/UX Design',
             rating: 7
         },
         {
-            title: 'Handlebars',
-            rating: 6
-        },
-        {
-            title: 'Javascript',
-            rating: 9
-        },
-        {
-            title: 'CSS',
-            rating: 9
-        },
-        {
-            title: 'jQuery',
+            title: 'Planning',
             rating: 7
         },
+        {
+            title: 'Learning',
+            rating: 9
+        },
+        {
+            title: 'Teamwork',
+            rating: 9
+        },
+        
     ],
     projects: [
         {
