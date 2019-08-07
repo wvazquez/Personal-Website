@@ -418,30 +418,30 @@ section.about {
 .work {
   background-color: #e5eaee;
   overflow-x: hidden; }
-  .work .projects {
+  .work .project {
     font-family: "Raleway", sans-serif;
     width: 200%;
     display: flex;
     position: relative;
     align-items: flex-start; }
-    .work .projects .project-container {
+    .work .project-container {
       width: 50%;
       position: relative;
       transition: left 1s;
       left: 0%; }
-    .work .projects .project-thumbnails {
+    .work .project-thumbnails {
       display: flex;
       flex-wrap: wrap; }
-    .work .projects .project-unit {
+    .work .project-unit {
       background-size: cover;
       text-align: center;
       height: 250px;
       width: 25%;
       position: relative;
       overflow: hidden; }
-      .work .projects .project-unit:hover .project-overlay {
+      .work .project-unit:hover .project-overlay {
         top: 0%; }
-    .work .projects .project-overlay {
+    .work .project-overlay {
       background-color: rgba(201, 144, 101, 0.82);
       cursor: pointer;
       height: 100%;
@@ -453,45 +453,45 @@ section.about {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .work .projects .project-overlay .title {
+      .work .project-overlay .title {
         color: white;
         font-weight: 100;
         text-transform: uppercase; }
-      .work .projects .project-overlay .icon {
+      .work .project-overlay .icon {
         margin-top: 20px;
         background: url("/images/icons/view-more.svg") center center no-repeat;
         height: 25px;
         width: 25px; }
-    .work .projects .project-overview {
+    .work .project-overview {
       margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       background: white;
       max-width: 75%; }
-      .work .projects .project-overview h3 {
+      .work .project-overview h3 {
         color: #c99065;
         font-weight: 300;
         font-size: 30px;
         text-transform: uppercase; }
-      .work .projects .project-overview .project-header {
+      .work .project-overview .project-header {
         display: flex;
         align-items: center;
         align-self: flex-start;
         margin-left: 5%;
         flex-wrap: wrap; }
-      .work .projects .project-overview .back-arrow {
+      .work .project-overview .back-arrow {
         margin-right: 25px;
         height: 40px;
         width: 40px;
         cursor: pointer;
         filter: opacity(75%); }
-        .work .projects .project-overview .back-arrow:hover {
+        .work .project-overview .back-arrow:hover {
           filter: opacity(100%); }
-      .work .projects .project-overview #overview-link {
+      .work .project-overview #overview-link {
         flex-basis: 100%;
         margin-left: 10%; }
-      .work .projects .project-overview .project-content {
+      .work .project-overview .project-content {
         max-width: 100%;
         background: darkgray; }
 

@@ -4,13 +4,12 @@
     h2{
         @extend %text-heading-secondary;
     }
-    .projects{
+    .project{
         font-family: $font-family-primary;
         width: 200%;
         display: flex;
         position: relative; //required to allow transition:left on project-container animation.
         align-items: flex-start;
-        .project{
           &-container{
               width: 50%;
               position: relative;
@@ -99,7 +98,6 @@
                 background: darkgray;
                 
             }
-          }
         }
     }
 }
