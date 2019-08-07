@@ -308,13 +308,13 @@ template {
 [hidden] {
   display: none; }
 
-section.about h2, .work h2, .header-container .header-nav nav a {
+section.about h2, .work h2, .contact h2, .header-container .header-nav nav a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center; }
 
-section.about h2, .work h2 {
+section.about h2, .work h2, .contact h2 {
   color: #e1c184;
   margin: 100px 0 30px; }
 
@@ -494,6 +494,15 @@ section.about {
       .work .project-overview .project-content {
         max-width: 100%;
         background: darkgray; }
+
+.contact {
+  background-color: #e5eaee; }
+  .contact .icon-unit {
+    display: flex;
+    justify-content: center; }
+  .contact .icon {
+    height: 50px;
+    width: 50px; }
 
 footer {
   display: flex;
