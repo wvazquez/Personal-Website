@@ -1,17 +1,13 @@
 .contact{
-    input {
+    font-family: $font-family-primary;
+    background-color: $bg-color-primary;
+    input, 
+    textarea {
         outline: none;
         border: none;
     }
-    
-    textarea {
-      outline: none;
-      border: none;
-    }
-    background-color: $bg-color-primary;
     h2{
         @extend %text-heading-secondary;
-
     }
     .icon-unit{
         display: flex;
@@ -27,9 +23,14 @@
                 transform: scale(1.2);
             }
         }
+        margin-bottom: 100px;
     }
     .contact-form {
-        /* width: 100%; */
+        // border: 1px solid rgba(127, 127, 127, 0.3);
+        // border-radius: 10px 10px 10px 10px;
+        padding: 20px;
+        margin: 0 auto;
+        width: 75%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -44,13 +45,12 @@
       }
       
       .message {
-        width: 80%;
+        width: 100%;
       }
       .validate-input {
         position: relative;
       }
       .input-label {
-        font-family: Poppins-Regular;
         font-size: 15px;
         color: #999999;
         line-height: 1.5;
@@ -60,19 +60,16 @@
         display: block;
         width: 100%;
         background: transparent;
-        font-family: Poppins-SemiBold;
         font-size: 18px;
         color: #555555;
         line-height: 1.2;
         padding: 0 5px;
+        margin-top: 15px;
       }
       .input:focus + .input-focus::before {
         width: 100%;
       }
       
-    //   .has-val.input100 + .input-focus::before {
-    //     width: 100%;
-    //   }
       .input-focus {
         position: absolute;
         display: block;
@@ -112,7 +109,6 @@
         height: 50px;
         background-color: #ff4b5a;
         border-radius: 25px;
-        font-family: Poppins-Medium;
         font-size: 16px;
         color: #fff;
         line-height: 1.2;
@@ -155,7 +151,6 @@
 
   input::placeholder,
   textarea::placeholder { 
-    font-family: Poppins-Medium;  
     color: #555555;
   }
   
@@ -183,15 +178,11 @@
     border-radius: 2px;
     padding: 4px 25px 4px 10px;
     top: 58%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 2px;
     pointer-events: none;
   
-    font-family: Poppins-Medium;
+    
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -211,10 +202,6 @@
     color: #c80000;
     font-size: 16px;
     top: 58%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 8px;
   }

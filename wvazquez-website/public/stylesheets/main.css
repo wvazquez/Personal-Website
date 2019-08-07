@@ -2829,16 +2829,16 @@ section.about {
         background: darkgray; }
 
 .contact {
+  font-family: "Raleway", sans-serif;
   background-color: #e5eaee; }
-  .contact input {
-    outline: none;
-    border: none; }
+  .contact input,
   .contact textarea {
     outline: none;
     border: none; }
   .contact .icon-unit {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 100px; }
     .contact .icon-unit a {
       line-height: 50px; }
     .contact .icon-unit .icon {
@@ -2848,7 +2848,9 @@ section.about {
       .contact .icon-unit .icon:hover {
         transform: scale(1.2); }
   .contact .contact-form {
-    /* width: 100%; */
+    padding: 20px;
+    margin: 0 auto;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2859,11 +2861,10 @@ section.about {
     padding-bottom: 13px;
     margin-bottom: 65px; }
   .contact .message {
-    width: 80%; }
+    width: 100%; }
   .contact .validate-input {
     position: relative; }
   .contact .input-label {
-    font-family: Poppins-Regular;
     font-size: 15px;
     color: #999999;
     line-height: 1.5;
@@ -2872,11 +2873,11 @@ section.about {
     display: block;
     width: 100%;
     background: transparent;
-    font-family: Poppins-SemiBold;
     font-size: 18px;
     color: #555555;
     line-height: 1.2;
-    padding: 0 5px; }
+    padding: 0 5px;
+    margin-top: 15px; }
   .contact .input:focus + .input-focus::before {
     width: 100%; }
   .contact .input-focus {
@@ -2911,7 +2912,6 @@ section.about {
     height: 50px;
     background-color: #ff4b5a;
     border-radius: 25px;
-    font-family: Poppins-Medium;
     font-size: 16px;
     color: #fff;
     line-height: 1.2;
@@ -2931,7 +2931,6 @@ section.about {
     color: transparent; }
   .contact input::placeholder,
   .contact textarea::placeholder {
-    font-family: Poppins-Medium;
     color: #555555; }
   .contact button {
     outline: none !important;
@@ -2948,14 +2947,9 @@ section.about {
     border-radius: 2px;
     padding: 4px 25px 4px 10px;
     top: 58%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 2px;
     pointer-events: none;
-    font-family: Poppins-Medium;
     color: #c80000;
     font-size: 13px;
     line-height: 1.4;
@@ -2971,10 +2965,6 @@ section.about {
     color: #c80000;
     font-size: 16px;
     top: 58%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 8px; }
   .contact .alert-validate:hover:before {
