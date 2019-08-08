@@ -28,16 +28,13 @@ router.get('/projects/:projectID', (req,res)=>{
 
 router.post('/sendemail', function(req,res){
   console.log(req.body);
-  // res.json(req.body);
+
+  $name = req.body.name;
+  $email = req.body.email;
+  $message = req.body.message;
+
   
-
-
-  //grab data attributes
-  //create connection with nodemailer,
-  //send mail
-  //return success or fail message to front end.
-
-let mailerConfig = {    
+  let mailerConfig = {    
     host: process.env.MAILER_HOST,  
     secure: false,
     port: process.env.MAILER_PORT,
@@ -54,19 +51,29 @@ let transporter = nodemailer.createTransport(mailerConfig);
 let mailOptions = {
     from: mailerConfig.auth.user,
     to: process.env.MAILER_TO,
-    subject: 'Some Subject',
-    text: "hey buddy!"
+    subject: `${mailerConfig.auth.user} new e-mail`,
+    text: 
+    `From: ${$name} Email: ${$email} ,
+    ${$message}
+    `
 };
 
 transporter.sendMail(mailOptions, function (error) {
     if (error) {
-        console.log(error);
         res.send(error);
 
     } else {
         res.send('good');
     }
 });
+
+
+  //grab data attributes
+  //create connection with nodemailer,
+  //send mail
+  //return success or fail message to front end.
+
+
 });
 
 

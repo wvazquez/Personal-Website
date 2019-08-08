@@ -83,8 +83,25 @@ function form() {
         }
 
         if(validated){
-            $.post('/sendemail', function(data){
-                alert(data);
+            var $name = $('#input-name');
+            var $email= $('#input-email');
+            var $message = $('#input-message')
+
+            var data={
+                name : $name.val().trim(),
+                email : $email.val().trim(),
+                message : $message.val().trim(),
+            }
+
+            
+
+            console.log(data);
+
+
+            $.post( '/sendemail', data, function(res){
+                $name.val("");
+                $email.val("");
+                $message.val("");
             });
         }
     });
