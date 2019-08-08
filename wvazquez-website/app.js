@@ -6,6 +6,7 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 const hbs = require('express-handlebars');
 const livereloadMiddleware = require("connect-livereload");
+var bodyParser = require('body-parser');
 
 
 var indexRouter = require('./routes/index');
@@ -31,8 +32,8 @@ var livereload = require('livereload').createServer({
 livereload.watch(path.join(__dirname));
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(livereloadMiddleware());
 app.use(sassMiddleware({
