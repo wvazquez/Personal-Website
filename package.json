@@ -1,45 +1,24 @@
 {
-  "name": "wvazquez",
-  "version": "0.0.1",
-  "description": "My personal website to display my projects, skills and experience.",
-  "main": "app.js",
+  "name": "wvazquez-website",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wvazquez/Personal-Website.git"
-  },
-  "keywords": [
-    "personal",
-    "website",
-    "projects",
-    "experience",
-    "skills"
-  ],
-  "author": "Wilmer Vazquez",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wvazquez/Personal-Website/issues"
-  },
-  "homepage": "https://github.com/wvazquez/Personal-Website#readme",
   "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
-    "pug": "^2.0.0-rc.4"
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "express-handlebars": "^3.1.0",
+    "http-errors": "~1.6.3",
+    "livereload": "^0.8.0",
+    "morgan": "~1.9.1",
+    "node-sass-middleware": "0.11.0",
+    "nodemailer": "^6.3.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.5",
-    "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.1"
+    "connect-livereload": "^0.6.1"
   }
 }
