@@ -45,35 +45,27 @@ router.post('/sendemail', function(req,res){
     tls:{
       rejectUnauthorized: false
     }
-};
-let transporter = nodemailer.createTransport(mailerConfig);
+  };
+  let transporter = nodemailer.createTransport(mailerConfig);
 
-let mailOptions = {
-    from: mailerConfig.auth.user,
-    to: process.env.MAILER_TO,
-    subject: `${mailerConfig.auth.user} new e-mail`,
-    text: 
-    `From: ${$name} Email: ${$email} ,
-    ${$message}
-    `
-};
+  let mailOptions = {
+      from: mailerConfig.auth.user,
+      to: process.env.MAILER_TO,
+      subject: `${mailerConfig.auth.user} new e-mail`,
+      text: 
+      `From: ${$name} Email: ${$email} ,
+      ${$message}
+      `
+  };
 
-transporter.sendMail(mailOptions, function (error) {
-    if (error) {
-        res.send(error);
+  transporter.sendMail(mailOptions, function (error) {
+      if (error) {
+          res.send(error);
 
-    } else {
-        res.send('good');
-    }
-});
-
-
-  //grab data attributes
-  //create connection with nodemailer,
-  //send mail
-  //return success or fail message to front end.
-
-
+      } else {
+          res.send('good');
+      }
+  });
 });
 
 
