@@ -9,12 +9,8 @@ module.exports = {
             url: '#work',
         },
         {
-            title: 'Clients',
-            url: '/',
-        },
-        {
             title: 'Contact',
-            url: '/',
+            url: '#contact',
         },
     ],
     skills: [

@@ -3,7 +3,9 @@ import { projectSetup } from "./projectSetup.js";
 import { form } from "./emailSubmit.js";
 
 $( document ).ready(function() {
-    smoothScroll();
+    // smoothScroll();
     projectSetup();
     form();
+
+    $('nav a[href^="#"]').on('click', smoothScroll);
 });
