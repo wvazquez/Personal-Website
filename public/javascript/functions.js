@@ -1,11 +1,20 @@
 import { smoothScroll } from "./smoothScroll.js";
-import { projectSetup } from "./projectSetup.js";
+import { getProject, returnToProjectOverview } from "./projects.js";
 import { form } from "./emailSubmit.js";
 
 $( document ).ready(function() {
-    // smoothScroll();
-    projectSetup();
-    form();
 
+    // smooth scroll for navigation items
     $('nav a[href^="#"]').on('click', smoothScroll);
+
+    //Displays specific project
+    $('.project-overlay').on('click', getProject);
+    
+    //Back arrow returns to all projects overview
+    $('.back-arrow').on('click', returnToProjectOverview);
+
+    // Handles email form submit
+    $('.validate-form').on('submit',form);
+
+    // focus();
 });

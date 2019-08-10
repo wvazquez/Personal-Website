@@ -1,26 +1,21 @@
-export function projectSetup(){
-    $('.project-overlay').on('click', (event)=>{
-        let projectID = event.currentTarget.id;
+export function getProject(event){
+    let projectID = event.currentTarget.id;
         
-        $.get(`/projects/${projectID}`, (data)=>{
-            setProjectOverview(data);
-            console.log(data);
-            $('.project-overview').show(100);
-            $('.project-container').css('left', '-50%');
-        });
-        
-    });
-    
-    $('.back-arrow').on('click', ()=>{
-        $('.project-container').css('left', 0);
-        $('.project-overview').fadeOut(700);
+    $.get(`/projects/${projectID}`, data => {
+        setProject(data);
+        console.log(data);
+        $('.project-overview').show(100);
+        $('.project-container').css('left', '-50%');
     });
 }
 
+export function returnToProjectOverview(){
+    $('.project-container').css('left', 0);
+    $('.project-overview').fadeOut(700);
+}
 
 
-
-function setProjectOverview(data){
+function setProject(data){
     $('#overview-title').text(data.title);
     $('#overview-link').attr('href', data.url)
     // $('<a/>',{
@@ -38,5 +33,5 @@ function setProjectOverview(data){
             text: asset.desc,
           }).appendTo($content);
     });
-    
+
 }
