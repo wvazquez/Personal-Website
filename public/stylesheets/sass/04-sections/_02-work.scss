@@ -1,6 +1,7 @@
 .work{
     background-color: $bg-color-primary;
     overflow-x: hidden;
+    padding-bottom: 100px;
     h2{
         @extend %text-heading-secondary;
     }

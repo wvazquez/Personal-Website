@@ -1,6 +1,7 @@
 .contact{
+  margin-bottom: 100px;
     font-family: $font-family-primary;
-    background-color: $bg-color-primary;
+    // background-color: $bg-color-primary;
     input, 
     textarea {
         outline: none;
@@ -14,21 +15,23 @@
         justify-content: center;
         a{
             line-height: 50px;
+            margin: 10px;
         }
         .icon{
             height: 50px;
             width: 50px;
-            transition: scale 1 ease-in;
+            transition: all 0.3s ease-in-out;
             &:hover{
                 transform: scale(1.2);
             }
         }
-        margin-bottom: 100px;
+        margin-bottom: 25px;
     }
     .contact-form {
         // border: 1px solid rgba(127, 127, 127, 0.3);
-        // border-radius: 10px 10px 10px 10px;
-        padding: 20px;
+        border-radius: 10px 10px 10px 10px;
+        box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
+        padding: 50px;
         margin: 0 auto;
         width: 75%;
         display: flex;
@@ -39,7 +42,7 @@
       .input-container{
         width: 40%;
         // position: relative;
-        border-bottom: 2px solid #d9d9d9;
+        border-bottom: 2px solid rgb(217, 217, 217);
         padding-bottom: 13px;
         margin-bottom: 65px;
       }
@@ -52,7 +55,7 @@
       }
       .input-label {
         font-size: 15px;
-        color: #999999;
+        color: rgb(153, 153, 153);
         line-height: 1.5;
         padding-left: 5px;
       }
