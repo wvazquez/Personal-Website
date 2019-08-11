@@ -6,37 +6,7 @@
     &-container {
         display: flex;
         flex-direction: column;
-        #{$h}-nav{
-            flex:1;
-            display: flex;
-            align-items: center;
-            .logo{
-                height: 50px;
-                width: 50px;
-                background: url("../images/Logo.png") center center;
-                background-size: cover;
-                background-position: center;
-                border-radius: 100%;
-                box-sizing: border-box;
-                &:hover{
-                    border: 1px solid rgba(255,255,255,0.5);
-                    cursor: pointer;
-                }
-            }
-            nav{
-                margin-left: auto;
-                a{
-                    @extend %text-heading-primary;
-                    text-decoration: none;
-                    display: inline-block;
-                    margin-right: 20px;
-                    color: white;
-                    &:hover{
-                        color: $color-accent-secondary;
-                    }
-                }        
-            }
-        }
+        
         #{$h}-content{
             align-self: center;
             flex:10;

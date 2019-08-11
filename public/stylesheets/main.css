@@ -2641,7 +2641,7 @@ template {
   overflow: visible;
   clip: auto; }
 
-section.about h2, .work h2, .contact h2, .header-container .header-nav nav a {
+section.about h2, .work h2, .contact h2, .navigation nav a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2653,7 +2653,7 @@ section.about h2, .work h2, .contact h2 {
 
 .container {
   max-width: 1400px;
-  padding: 10px;
+  padding: 15px 50px;
   margin: 0 auto;
   position: relative;
   height: 100%; }
@@ -2676,6 +2676,31 @@ section.about h2, .work h2, .contact h2 {
         height: 8px;
         background-color: #c99065; }
 
+.navigation {
+  flex: 1;
+  display: flex;
+  align-items: center; }
+  .navigation .logo {
+    height: 50px;
+    width: 50px;
+    background: url("../images/Logo.png") center center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    transition: all 0.3s ease-in-out; }
+    .navigation .logo:hover {
+      transform: scale(1.2);
+      cursor: pointer; }
+  .navigation nav {
+    margin-left: auto; }
+    .navigation nav a {
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 20px;
+      color: white; }
+      .navigation nav a:hover {
+        color: #e1c184; }
+
 .header {
   height: 80vh;
   background-color: black;
@@ -2683,30 +2708,6 @@ section.about h2, .work h2, .contact h2 {
   .header-container {
     display: flex;
     flex-direction: column; }
-    .header-container .header-nav {
-      flex: 1;
-      display: flex;
-      align-items: center; }
-      .header-container .header-nav .logo {
-        height: 50px;
-        width: 50px;
-        background: url("../images/Logo.png") center center;
-        background-size: cover;
-        background-position: center;
-        border-radius: 100%;
-        box-sizing: border-box; }
-        .header-container .header-nav .logo:hover {
-          border: 1px solid rgba(255, 255, 255, 0.5);
-          cursor: pointer; }
-      .header-container .header-nav nav {
-        margin-left: auto; }
-        .header-container .header-nav nav a {
-          text-decoration: none;
-          display: inline-block;
-          margin-right: 20px;
-          color: white; }
-          .header-container .header-nav nav a:hover {
-            color: #e1c184; }
     .header-container .header-content {
       align-self: center;
       flex: 10;

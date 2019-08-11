@@ -1,0 +1,32 @@
+.navigation{
+    flex:1;
+    display: flex;
+    align-items: center;
+    .logo{
+        height: 50px;
+        width: 50px;
+        background: url("../images/Logo.png") center center;
+        background-size: cover;
+        background-position: center;
+        border-radius: 100%;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            // border: 1px solid rgba(255,255,255,0.5);
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+    nav{
+        margin-left: auto;
+        a{
+            @extend %text-heading-primary;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+            color: white;
+            &:hover{
+                color: $color-accent-secondary;
+            }
+        }        
+    }
+}
