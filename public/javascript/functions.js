@@ -1,6 +1,7 @@
 import { smoothScroll } from "./smoothScroll.js";
 import { getProject, returnToProjectOverview } from "./projects.js";
 import { form } from "./emailSubmit.js";
+import { videoSetup, videoResize } from "./video.js";
 
 $( document ).ready(function() {
 
@@ -16,5 +17,7 @@ $( document ).ready(function() {
     // Handles email form submit
     $('.validate-form').on('submit',form);
 
-    // focus();
+    // handles video setup and reload
+    videoSetup();
+    $(window).on('resize', videoResize);
 });
