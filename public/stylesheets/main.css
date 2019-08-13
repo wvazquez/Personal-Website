@@ -3031,7 +3031,7 @@ section.about {
 
 footer {
   display: flex;
-  background: url("../images/background-brooklynbridge.jpg") top center no-repeat;
+  background: url("../images/backgrounds/mountains.jpg") center 85% no-repeat;
   background-size: cover;
   height: 150px;
   color: white;
