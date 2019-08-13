@@ -1,65 +1,50 @@
 .header{
-    overflow: hidden !important;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, 0);
-
+    z-index: 2000 !important;
+    overflow: hidden;
+    height: 80vh;
+    background-color: transparent;
     color: white;
-    display: flex;
-
     $h: &;
     &-container {
         z-index: 100;
         display: flex;
         flex-direction: column;
+        align-items: stretch;
         
         #{$h}-content{
-
-            align-self: center;
-            flex:10;
+            padding-left: 10%;
+            flex-grow: 10;
+            // height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
             max-width: 55%;
             #{$h}-phrase{
+                
                 // font-family: 'Caveat', cursive; 
                 font-family: 'Cabin Sketch', cursive; 
                 font-weight: 400;
                 font-size: 40px;
                 font-weight: 700;
                 letter-spacing: 0.05em;
-                margin-bottom: 20px;
+                margin-bottom: 5px;
                 .keywords{                    
                     color: $color-accent-secondary;
                     font-weight: 700;
                 }
-                
             }
             #{$h}-subphrase{
-                // font-family: 'Caveat', cursive; 
-                font-family: 'Cabin Sketch', cursive; 
+                font-family: 'Caveat', cursive; 
+                // font-family: 'Cabin Sketch', cursive; 
                 font-size: 20px;
+                margin-top: 5px;
 
                 .keywords{                    
                     color: $color-accent-secondary;
                     font-weight: 700;
-                }
-                
+                }       
             }
-            // .header-kicker{
-                // flex: 1;
-                // transform: rotate(-90deg);
-                // transform-origin: 100% 190%;
-                // display: inline-block;
-                // writing-mode: vertical-rl;
-                // text-orientation: mixed;
-                // letter-spacing: 0.05em;
-                // line-height: 1;
-                // font-size: 14px;
-                // font-weight: 700;
-                // text-transform: uppercase;
-                // color: $color-accent-secondary;
-            // }
         }
     }
 }
