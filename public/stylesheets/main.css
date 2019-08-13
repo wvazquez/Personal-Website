@@ -2702,8 +2702,6 @@ section.about h2, .work h2, .contact h2 {
         color: #e1c184; }
 
 .homepage-hero-module {
-  border-right: none;
-  border-left: none;
   position: absolute;
   height: 100%;
   width: 100%; }
@@ -2746,7 +2744,7 @@ section.about h2, .work h2, .contact h2 {
 
 .header {
   overflow: hidden !important;
-  height: 80vh;
+  height: 50vh;
   background-color: rgba(0, 0, 0, 0);
   color: white;
   display: flex; }

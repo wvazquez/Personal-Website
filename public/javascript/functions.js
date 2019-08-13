@@ -1,7 +1,7 @@
 import { smoothScroll } from "./smoothScroll.js";
 import { getProject, returnToProjectOverview } from "./projects.js";
 import { form } from "./emailSubmit.js";
-import { videoSetup, videoResize } from "./video.js";
+import { videoSetup } from "./video.js";
 
 $( document ).ready(function() {
 
@@ -19,5 +19,5 @@ $( document ).ready(function() {
 
     // handles video setup and reload
     videoSetup();
-    $(window).on('resize', videoResize);
+    $(window).on('resize', videoSetup);
 });
