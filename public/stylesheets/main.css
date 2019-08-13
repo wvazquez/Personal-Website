@@ -2743,6 +2743,21 @@ section.about h2, .work h2, .contact h2 {
 .video-container video.fillWidth {
   width: 100%; }
 
+.icon-unit {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px; }
+  .icon-unit a {
+    line-height: 50px;
+    margin: 10px; }
+  .icon-unit .icon {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s ease-in-out; }
+    .icon-unit .icon:hover {
+      transform: scale(1.2); }
+
 .header {
   z-index: 2000 !important;
   overflow: hidden;
@@ -2890,19 +2905,6 @@ section.about {
   .contact textarea {
     outline: none;
     border: none; }
-  .contact .icon-unit {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px; }
-    .contact .icon-unit a {
-      line-height: 50px;
-      margin: 10px; }
-    .contact .icon-unit .icon {
-      height: 50px;
-      width: 50px;
-      transition: all 0.3s ease-in-out; }
-      .contact .icon-unit .icon:hover {
-        transform: scale(1.2); }
   .contact .contact-form {
     border-radius: 10px 10px 10px 10px;
     box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
@@ -3051,5 +3053,93 @@ footer {
         color: rgba(255, 255, 255, 0.7); }
         footer .footer .footer-nav nav a:hover {
           color: rgba(0, 0, 0, 0.5); }
+
+#notfound {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(97, 144, 232, 0.9) 0%, rgba(255, 255, 255, 0.7) 70%), url("/images/backgrounds/mountains.jpg") 100% 100% no-repeat;
+  background-size: cover; }
+
+#notfound .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.notfound {
+  max-width: 410px;
+  width: 100%;
+  text-align: center; }
+
+.notfound .notfound-404 {
+  height: 280px;
+  position: relative;
+  z-index: -1; }
+
+.notfound .notfound-404 h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 230px;
+  margin: 0px;
+  font-weight: 900;
+  position: absolute;
+  color: #4d4d4d;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url("/images/backgrounds/error.jpg") no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  background-position: center; }
+
+.notfound h2 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0; }
+
+.notfound p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0px; }
+
+.notfound .home-btn,
+.notfound .contact-btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 13px 25px;
+  font-size: 18px;
+  border-radius: 40px;
+  margin: 7px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: #c99065;
+  background: white;
+  border: 1px solid #c99065; }
+
+.notfound .home-btn:hover,
+.notfound .contact-btn:hover {
+  color: white;
+  background: #c99065;
+  border: 1px solid #c99065; }
+
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 {
+    height: 142px; }
+  .notfound .notfound-404 h1 {
+    font-size: 112px; } }
+
+@media only screen and (max-width: 480px) {
+  .notfound .home-btn,
+  .notfound .contact-btn {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=main.css.map */
