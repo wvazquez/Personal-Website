@@ -7,7 +7,7 @@ var sassMiddleware = require('node-sass-middleware');
 const hbs = require('express-handlebars');
 const livereloadMiddleware = require("connect-livereload");
 var bodyParser = require('body-parser');
-
+var env = process.env.NODE_ENV || 'development';
 
 var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
@@ -25,17 +25,21 @@ app.engine( 'hbs', hbs( {
 } ) );
 app.set('view engine', 'hbs');
 
-// live reload setup
-var livereload = require('livereload').createServer({
-  exts: ['js','scss', 'hbs']
-});
-livereload.watch(path.join(__dirname));
+// live reload setup only on development
+if(env == 'development'){
+  var livereload = require('livereload').createServer({
+    exts: ['js','scss', 'hbs']
+  });
+  livereload.watch(path.join(__dirname));
+  app.use(livereloadMiddleware());
+}
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(livereloadMiddleware());
+
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
