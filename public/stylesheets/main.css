@@ -3151,6 +3151,10 @@ footer {
   background: #c99065;
   border: 1px solid #c99065; }
 
+.notfound .home-btn:focus,
+.notfound .contact-btn:focus {
+  outline-style: none !important; }
+
 @media only screen and (max-width: 767px) {
   .notfound .notfound-404 {
     height: 142px; }

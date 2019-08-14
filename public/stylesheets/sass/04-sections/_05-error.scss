@@ -85,6 +85,10 @@
     background: $color-accent-primary;
     border: 1px solid $color-accent-primary;
   }
+  .notfound .home-btn:focus,
+  .notfound .contact-btn:focus{
+    outline-style: none !important;
+  }
 
   @media only screen and (max-width: 767px) {
     .notfound .notfound-404 {
