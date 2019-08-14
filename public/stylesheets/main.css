@@ -2870,12 +2870,12 @@ section.about h2, .work h2, .contact h2 {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 16px;
+      font-size: 12px;
       color: #fff;
       line-height: 1.2;
-      padding: 0 20px;
-      min-width: 160px;
-      height: 50px;
+      padding: 0 10px;
+      min-width: 100px;
+      height: 30px;
       background-color: #c99065;
       border-radius: 25px;
       box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
@@ -2933,6 +2933,13 @@ section.about h2, .work h2, .contact h2 {
 @media (min-width: 768px) {
   .contact .contact-form {
     padding: 100px 50px; } }
+
+@media (min-width: 576px) {
+  .contact-form .contact-button-container .contact-button {
+    font-size: 16px;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px; } }
 
 .header {
   z-index: 2000 !important;

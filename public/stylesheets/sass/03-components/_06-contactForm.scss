@@ -98,13 +98,13 @@
       justify-content: center;
       align-items: center;
 
-      font-size: 16px;
+      font-size: 12px;
       color: #fff;
 
       line-height: 1.2;
-      padding: 0 20px;
-      min-width: 160px;
-      height: 50px;
+      padding: 0 10px;
+      min-width: 100px;
+      height: 30px;
 
       background-color: $color-accent-primary;
       border-radius: 25px;
@@ -187,5 +187,14 @@
 @media (min-width: $md) {
   .contact .contact-form {
     padding: 100px 50px;
+  }
+}
+
+@media (min-width: $sm) {
+  .contact-form .contact-button-container .contact-button{
+    font-size: 16px;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
   }
 }
