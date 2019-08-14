@@ -3,15 +3,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 75%;
-  padding: 50px 50px 68px 50px;
+  width: 100%;
+  padding: 20px 10px;
   margin: 0 auto;
 
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
     
   .input-container{
-    width: 40%;
+    width: 100%;
     padding-bottom: 13px;
     margin-bottom: 65px;
 
@@ -169,3 +169,23 @@
   }     
 }
   
+@media (min-width: $lg) {  
+  .input-container{
+    width: 40% !important;
+    &.message {
+      width: 100% !important;
+    }
+  }
+  .contact .contact-form{
+    width: 75%;
+  }
+  .modal .contact-form{
+    padding: 50px 50px 68px 50px;
+  }
+}
+
+@media (min-width: $md) {
+  .contact .contact-form {
+    padding: 100px 50px;
+  }
+}
