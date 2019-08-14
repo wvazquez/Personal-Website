@@ -349,3 +349,12 @@ template {
 [hidden] {
   display: none;
 }
+
+button {
+  outline: none !important;
+  border: none !important;
+  background: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}

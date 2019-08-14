@@ -1,19 +1,23 @@
-.modal .contact-form{
-    // margin: 100px 50px;
-    width: 100%; //overrides default width
-    // opacity: 1 !important;
-    box-shadow: none;
-
-}
-
 .modal{
-    // border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
-}
-
-.modal .modal-content .modal-body{
-    padding: 0;
-}
-.modal-header{
-    border-bottom: none;
+    .modal-header{
+        border-bottom: none; // Overrides bootstrap default styles
+        justify-content: center;
+        color: $color-accent-primary;
+        margin: 10px 0 50px 0;
+        .modal-title {
+            border-bottom : $color-accent-primary 1px solid;
+            padding-bottom: 1%;
+        }
+        .close{ 
+            position: absolute; //takes button out of flow to center title
+            left: 92%;
+        }
+    }
+    .modal-body{
+        padding: 0; // Overrides bootstrap default styles
+    }
+    .contact-form{
+        width: 100%; //overrides our default width
+        box-shadow: none;
+    }
 }

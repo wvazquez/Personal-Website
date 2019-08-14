@@ -308,6 +308,13 @@ template {
 [hidden] {
   display: none; }
 
+button {
+  outline: none !important;
+  border: none !important;
+  background: transparent; }
+  button:hover {
+    cursor: pointer; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2758,141 +2765,140 @@ section.about h2, .work h2, .contact h2 {
     .icon-unit .icon:hover {
       transform: scale(1.2); }
 
+.modal .modal-header {
+  border-bottom: none;
+  justify-content: center;
+  color: #c99065;
+  margin: 10px 0 50px 0; }
+  .modal .modal-header .modal-title {
+    border-bottom: #c99065 1px solid;
+    padding-bottom: 1%; }
+  .modal .modal-header .close {
+    position: absolute;
+    left: 92%; }
+
+.modal .modal-body {
+  padding: 0; }
+
 .modal .contact-form {
   width: 100%;
   box-shadow: none; }
 
-.modal {
-  box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4); }
-
-.modal .modal-content .modal-body {
-  padding: 0; }
-
-.modal-header {
-  border-bottom: none; }
-
 .contact-form {
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
-  padding: 50px;
-  margin: 0 auto;
-  width: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 68px; }
+  width: 75%;
+  padding: 50px 50px 68px 50px;
+  margin: 0 auto;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4); }
   .contact-form .input-container {
     width: 40%;
-    border-bottom: 2px solid #d9d9d9;
     padding-bottom: 13px;
-    margin-bottom: 65px; }
-  .contact-form .message {
-    width: 100%; }
-  .contact-form .validate-input {
-    position: relative; }
+    margin-bottom: 65px;
+    border-bottom: 2px solid #d9d9d9; }
+    .contact-form .input-container.message {
+      width: 100%; }
+    .contact-form .input-container.validate-input {
+      position: relative; }
   .contact-form .input-label {
     font-size: 15px;
     color: #999999;
     line-height: 1.5;
     padding-left: 5px; }
   .contact-form .input {
-    display: block;
-    width: 100%;
-    background: transparent;
     font-size: 18px;
     color: #555555;
+    display: block;
+    width: 100%;
     line-height: 1.2;
     padding: 0 5px;
-    margin-top: 15px; }
+    margin-top: 15px;
+    border: none;
+    background: transparent; }
+    .contact-form .input::placeholder {
+      color: #555555; }
+    .contact-form .input:focus {
+      border-color: transparent !important;
+      outline-style: none; }
+    .contact-form .input:focus::placeholder {
+      color: transparent; }
   .contact-form .input:focus + .input-focus::before {
     width: 100%; }
   .contact-form .input-focus {
-    position: absolute;
-    display: block;
     width: 100%;
     height: 100%;
+    display: block;
+    position: absolute;
     top: 0;
     left: 0;
     pointer-events: none; }
-  .contact-form .input-focus::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    transition: all 0.4s;
-    background: #ff4b5a; }
+    .contact-form .input-focus::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      background: #c99065;
+      transition: all 0.4s; }
   .contact-form .contact-button-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     margin-top: -25px; }
-  .contact-form .contact-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
-    background-color: #ff4b5a;
-    border-radius: 25px;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    transition: all 0.4s;
-    box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
-    .contact-form .contact-button i {
+    .contact-form .contact-button-container .contact-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.2;
+      padding: 0 20px;
+      min-width: 160px;
+      height: 50px;
+      background-color: #c99065;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
       transition: all 0.4s; }
-    .contact-form .contact-button:hover {
-      background-color: #333333;
-      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5); }
-    .contact-form .contact-button:hover i {
-      transform: translateX(10px); }
-  .contact-form textarea:focus, .contact-form input:focus {
-    border-color: transparent !important; }
-  .contact-form input:focus::placeholder,
-  .contact-form textarea:focus::placeholder {
-    color: transparent; }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder {
-    color: #555555; }
-  .contact-form button {
-    outline: none !important;
-    border: none;
-    background: transparent; }
-  .contact-form button:hover {
-    cursor: pointer; }
+      .contact-form .contact-button-container .contact-button i {
+        transition: all 0.4s; }
+      .contact-form .contact-button-container .contact-button:hover {
+        background-color: #ff4b5a;
+        box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
+      .contact-form .contact-button-container .contact-button:hover i {
+        transform: translateX(10px); }
   .contact-form .alert-validate::before {
     content: attr(data-validate);
-    position: absolute;
+    font-size: 13px;
+    color: #c80000;
+    text-align: left;
+    line-height: 1.4;
     max-width: 70%;
+    padding: 4px 25px 4px 10px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 58%;
+    right: 2px;
     background-color: #fff;
     border: 1px solid #c80000;
     border-radius: 2px;
-    padding: 4px 25px 4px 10px;
-    top: 58%;
     transform: translateY(-50%);
-    right: 2px;
-    pointer-events: none;
-    color: #c80000;
-    font-size: 13px;
-    line-height: 1.4;
-    text-align: left;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.4s; }
+    transition: opacity 0.4s;
+    pointer-events: none; }
   .contact-form .alert-validate::after {
     content: "\f06a";
     font-family: FontAwesome;
+    font-size: 16px;
+    color: #c80000;
     display: block;
     position: absolute;
-    color: #c80000;
-    font-size: 16px;
     top: 58%;
-    transform: translateY(-50%);
-    right: 8px; }
+    right: 8px;
+    transform: translateY(-50%); }
   .contact-form .alert-validate:hover:before {
     visibility: visible;
     opacity: 1; }
