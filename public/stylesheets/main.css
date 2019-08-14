@@ -2758,6 +2758,132 @@ section.about h2, .work h2, .contact h2 {
     .icon-unit .icon:hover {
       transform: scale(1.2); }
 
+.contact-form {
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
+  padding: 50px;
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 68px; }
+  .contact-form .input-container {
+    width: 40%;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 13px;
+    margin-bottom: 65px; }
+  .contact-form .message {
+    width: 100%; }
+  .contact-form .validate-input {
+    position: relative; }
+  .contact-form .input-label {
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.5;
+    padding-left: 5px; }
+  .contact-form .input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-size: 18px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 0 5px;
+    margin-top: 15px; }
+  .contact-form .input:focus + .input-focus::before {
+    width: 100%; }
+  .contact-form .input-focus {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; }
+  .contact-form .input-focus::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: #ff4b5a; }
+  .contact-form .contact-button-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -25px; }
+  .contact-form .contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 50px;
+    background-color: #ff4b5a;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
+    .contact-form .contact-button i {
+      transition: all 0.4s; }
+    .contact-form .contact-button:hover {
+      background-color: #333333;
+      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5); }
+    .contact-form .contact-button:hover i {
+      transform: translateX(10px); }
+  .contact-form textarea:focus, .contact-form input:focus {
+    border-color: transparent !important; }
+  .contact-form input:focus::placeholder,
+  .contact-form textarea:focus::placeholder {
+    color: transparent; }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #555555; }
+  .contact-form button {
+    outline: none !important;
+    border: none;
+    background: transparent; }
+  .contact-form button:hover {
+    cursor: pointer; }
+  .contact-form .alert-validate::before {
+    content: attr(data-validate);
+    position: absolute;
+    max-width: 70%;
+    background-color: #fff;
+    border: 1px solid #c80000;
+    border-radius: 2px;
+    padding: 4px 25px 4px 10px;
+    top: 58%;
+    transform: translateY(-50%);
+    right: 2px;
+    pointer-events: none;
+    color: #c80000;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s; }
+  .contact-form .alert-validate::after {
+    content: "\f06a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 16px;
+    top: 58%;
+    transform: translateY(-50%);
+    right: 8px; }
+  .contact-form .alert-validate:hover:before {
+    visibility: visible;
+    opacity: 1; }
+
 .header {
   z-index: 2000 !important;
   overflow: hidden;
@@ -2905,131 +3031,6 @@ section.about {
   .contact textarea {
     outline: none;
     border: none; }
-  .contact .contact-form {
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
-    padding: 50px;
-    margin: 0 auto;
-    width: 75%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 68px; }
-  .contact .input-container {
-    width: 40%;
-    border-bottom: 2px solid #d9d9d9;
-    padding-bottom: 13px;
-    margin-bottom: 65px; }
-  .contact .message {
-    width: 100%; }
-  .contact .validate-input {
-    position: relative; }
-  .contact .input-label {
-    font-size: 15px;
-    color: #999999;
-    line-height: 1.5;
-    padding-left: 5px; }
-  .contact .input {
-    display: block;
-    width: 100%;
-    background: transparent;
-    font-size: 18px;
-    color: #555555;
-    line-height: 1.2;
-    padding: 0 5px;
-    margin-top: 15px; }
-  .contact .input:focus + .input-focus::before {
-    width: 100%; }
-  .contact .input-focus {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none; }
-  .contact .input-focus::before {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    transition: all 0.4s;
-    background: #ff4b5a; }
-  .contact .contact-button-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -25px; }
-  .contact .contact-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
-    background-color: #ff4b5a;
-    border-radius: 25px;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1.2;
-    transition: all 0.4s;
-    box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
-    .contact .contact-button i {
-      transition: all 0.4s; }
-    .contact .contact-button:hover {
-      background-color: #333333;
-      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5); }
-    .contact .contact-button:hover i {
-      transform: translateX(10px); }
-  .contact textarea:focus, .contact input:focus {
-    border-color: transparent !important; }
-  .contact input:focus::placeholder,
-  .contact textarea:focus::placeholder {
-    color: transparent; }
-  .contact input::placeholder,
-  .contact textarea::placeholder {
-    color: #555555; }
-  .contact button {
-    outline: none !important;
-    border: none;
-    background: transparent; }
-  .contact button:hover {
-    cursor: pointer; }
-  .contact .alert-validate::before {
-    content: attr(data-validate);
-    position: absolute;
-    max-width: 70%;
-    background-color: #fff;
-    border: 1px solid #c80000;
-    border-radius: 2px;
-    padding: 4px 25px 4px 10px;
-    top: 58%;
-    transform: translateY(-50%);
-    right: 2px;
-    pointer-events: none;
-    color: #c80000;
-    font-size: 13px;
-    line-height: 1.4;
-    text-align: left;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.4s; }
-  .contact .alert-validate::after {
-    content: "\f06a";
-    font-family: FontAwesome;
-    display: block;
-    position: absolute;
-    color: #c80000;
-    font-size: 16px;
-    top: 58%;
-    transform: translateY(-50%);
-    right: 8px; }
-  .contact .alert-validate:hover:before {
-    visibility: visible;
-    opacity: 1; }
 
 footer {
   display: flex;
