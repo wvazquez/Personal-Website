@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 const hbs = require('express-handlebars');
-const livereloadMiddleware = require("connect-livereload");
 var bodyParser = require('body-parser');
 var env = process.env.NODE_ENV || 'development';
 
@@ -27,6 +26,7 @@ app.set('view engine', 'hbs');
 
 // live reload setup only on development
 if(env == 'development'){
+  const livereloadMiddleware = require("connect-livereload");
   var livereload = require('livereload').createServer({
     exts: ['js','scss', 'hbs']
   });
