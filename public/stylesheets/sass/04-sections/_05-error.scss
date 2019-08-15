@@ -1,115 +1,87 @@
 #notfound {
-    font-family: $font-family-primary;
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(97,144,232,0.9) 0%, rgba(255,255,255,0.7) 70%), url('/images/backgrounds/mountains.jpg') 100% 100% no-repeat;
-    background-size: cover;
-  }
+  font-family: $font-family-primary;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  #notfound .notfound {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-  
+  background: linear-gradient(to bottom, rgba(97,144,232,0.9) 0%, rgba(255,255,255,0.7) 70%), url('/images/backgrounds/mountains.jpg') 100% 100% no-repeat;
+  background-size: cover;
+
   .notfound {
-    max-width: 410px;
     width: 100%;
+    max-width: 800px;
+    padding: 10px;
     text-align: center;
   }
-
-.notfound .notfound-404 {
-    height: 280px;
-    position: relative;
-    z-index: -1;
-  }
-  
-
-.notfound .notfound-404 h1 {
+  .title{
     font-family: 'Montserrat', sans-serif;
-    font-size: 230px;
-    margin: 0px;
+    font-size: 40px;
     font-weight: 900;
-    position: absolute;
     color: lighten(black, 30%);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
     background: url('/images/backgrounds/error.jpg') no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: cover;
     background-position: center;
   }
-
-  
-.notfound h2 {
-    font-size: 24px;
+  h2 {
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     margin-top: 0;
   }
-  
-  .notfound p {
+  p {
     color: #000;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
+
     margin-bottom: 20px;
     margin-top: 0px;
   }
-  
-  .notfound .home-btn, 
-  .notfound .contact-btn {
+  .home-btn, 
+  .contact-btn {
     display: inline-block;
+    padding: 8px 20px;
+    margin: 7px;
+
+    font-size: 14px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 13px 25px;
-    font-size: 18px;
-    border-radius: 40px;
-    margin: 7px;
+    color: $color-accent-primary;
+    
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    color: $color-accent-primary;
+    
     background: white;
     border: 1px solid $color-accent-primary;
-  }
-  
-  .notfound .home-btn:hover, 
-  .notfound .contact-btn:hover {
-    color: white;
-    background: $color-accent-primary;
-    border: 1px solid $color-accent-primary;
-  }
-  .notfound .home-btn:focus,
-  .notfound .contact-btn:focus{
-    outline-style: none !important;
-  }
-
-  @media only screen and (max-width: 767px) {
-    .notfound .notfound-404 {
-      height: 142px;
+    border-radius: 40px;
+    &:hover{
+      color: white;
+      background: $color-accent-primary;
+      border: 1px solid $color-accent-primary;
     }
-    .notfound .notfound-404 h1 {
-      font-size: 112px;
+    &:focus{
+      outline-style: none !important;
     }
+  }
+} 
+@media (min-width: $sm){
+  #notfound .home-btn, 
+  #notfound .contact-btn {
+    padding: 13px 25px;
+    font-size: 18px;
+  }
+  #notfound .title{
+    font-size: 80px;
+  }
+  #notfound h2 {
+    font-size: 24px;
+  }
+  #notfound p {
+    font-size: 14px;
+  }
 }
-  
-  @media only screen and (max-width: 480px) {
-    // .notfound .notfound-404 {
-    //   height: 146px;
-    // }
-    // .notfound .notfound-404 h1 {
-    //   font-size: 146px;
-    // }
-    // .notfound h2 {
-    //   font-size: 16px;
-    // }
-    .notfound .home-btn, .notfound .contact-btn {
-      font-size: 14px;
-    }
-  }
