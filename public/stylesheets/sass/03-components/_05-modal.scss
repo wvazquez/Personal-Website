@@ -1,0 +1,38 @@
+.modal{
+    .modal-header{
+        position: relative;
+        border-bottom: none; // Overrides bootstrap default styles
+        justify-content: center;
+        color: $color-accent-primary;
+        margin: 10px 0;
+    }
+    .modal-title {
+        border-bottom : $color-accent-primary 1px solid;
+        padding-bottom: 1%;
+    }
+    .close{ 
+        position: absolute; //takes button out of flow to center title
+        justify-self: flex-end;
+        margin-left: auto;
+        right: 10px;
+        top: -5px;
+    }
+    .modal-body{
+        padding: 0; // Overrides bootstrap default styles
+    }
+    .contact-form{
+        padding: 10px;
+        box-shadow: none;
+    }
+}
+
+
+@media (min-width: $lg) {
+    .modal .modal-header{
+        margin: 10px 0 50px 0;
+    }
+    .modal .close{ 
+        right: 20px;
+        top:0;
+    }
+}

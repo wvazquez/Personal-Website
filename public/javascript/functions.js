@@ -2,6 +2,7 @@ import { smoothScroll } from "./smoothScroll.js";
 import { getProject, returnToProjectOverview } from "./projects.js";
 import { form } from "./emailSubmit.js";
 import { videoSetup } from "./video.js";
+import { modal } from './modal.js';
 
 $( document ).ready(function() {
 
@@ -20,4 +21,7 @@ $( document ).ready(function() {
     // handles video setup and reload
     videoSetup();
     $(window).on('resize', videoSetup);
+
+    //handles contact modal on 404 page.
+    $('#notfound .contact-btn').on('click', modal)
 });
