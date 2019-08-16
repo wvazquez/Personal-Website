@@ -5,3 +5,5 @@ pack-lock.json
 .DS_Store
 
 old_project_files/
+
+.vscode/

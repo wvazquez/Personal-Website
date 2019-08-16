@@ -2946,6 +2946,33 @@ section.about h2, .work h2, .contact h2 {
     min-width: 160px;
     height: 50px; } }
 
+.button-main {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #c99065;
+  transition: 0.2s all;
+  border-radius: 40px; }
+  .button-main:focus {
+    outline-style: none !important; }
+
+.button-gold {
+  background: white;
+  border: 1px solid #c99065; }
+  .button-gold:hover {
+    color: white;
+    background: #c99065;
+    border: 1px solid #c99065; }
+
+@media (min-width: 768px) {
+  .button-main {
+    padding: 13px 25px;
+    font-size: 18px; } }
+
 .header {
   z-index: 2000 !important;
   overflow: hidden;
@@ -3151,35 +3178,8 @@ footer {
     font-weight: 400;
     margin-bottom: 20px;
     margin-top: 0px; }
-  #notfound .home-btn,
-  #notfound .contact-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    margin: 7px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #c99065;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    background: white;
-    border: 1px solid #c99065;
-    border-radius: 40px; }
-    #notfound .home-btn:hover,
-    #notfound .contact-btn:hover {
-      color: white;
-      background: #c99065;
-      border: 1px solid #c99065; }
-    #notfound .home-btn:focus,
-    #notfound .contact-btn:focus {
-      outline-style: none !important; }
 
 @media (min-width: 576px) {
-  #notfound .home-btn,
-  #notfound .contact-btn {
-    padding: 13px 25px;
-    font-size: 18px; }
   #notfound .title {
     font-size: 80px; }
   #notfound h2 {
@@ -3192,7 +3192,7 @@ footer {
   height: 100vh;
   display: flex;
   align-items: stretch;
-  background: linear-gradient(to bottom, rgba(97, 144, 232, 0.9) 0%, rgba(255, 255, 255, 0.7) 70%), url("/images/backgrounds/mountains.jpg") 100% 100% no-repeat;
+  background: url("/images/backgrounds/mountains.jpg") 100% 100% no-repeat;
   background-size: cover; }
   .comingsoon section {
     display: flex;
@@ -3200,15 +3200,16 @@ footer {
     justify-content: center;
     width: 100%; }
   .comingsoon .content {
-    padding: 10px; }
+    padding: 10px;
+    text-align: center; }
   .comingsoon .left {
     background-color: rgba(255, 255, 255, 0.8); }
     .comingsoon .left .content .input-container {
       width: 100% !important; }
     .comingsoon .left .contact-form {
+      text-align: left;
       width: 75%;
       box-shadow: none;
-      margin: 50px 0;
       padding-left: 0px;
       padding-right: 0px; }
       .comingsoon .left .contact-form .input-label,
@@ -3216,7 +3217,7 @@ footer {
         padding-left: 0; }
   .comingsoon h1 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     margin-top: 0; }
   .comingsoon p {
@@ -3225,40 +3226,5 @@ footer {
     font-weight: 400;
     margin-bottom: 20px;
     margin-top: 0px; }
-  .comingsoon .home-btn,
-  .comingsoon .contact-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    margin: 7px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #c99065;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    background: white;
-    border: 1px solid #c99065;
-    border-radius: 40px; }
-    .comingsoon .home-btn:hover,
-    .comingsoon .contact-btn:hover {
-      color: white;
-      background: #c99065;
-      border: 1px solid #c99065; }
-    .comingsoon .home-btn:focus,
-    .comingsoon .contact-btn:focus {
-      outline-style: none !important; }
-
-@media (min-width: 576px) {
-  .comingsoon .home-btn,
-  .comingsoon .contact-btn {
-    padding: 13px 25px;
-    font-size: 18px; }
-  .comingsoon .title {
-    font-size: 80px; }
-  .comingsoon h1 {
-    font-size: 24px; }
-  .comingsoon p {
-    font-size: 14px; } }
 
 /*# sourceMappingURL=main.css.map */

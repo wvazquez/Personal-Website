@@ -1,0 +1,33 @@
+
+.button-main{
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-accent-primary;
+    transition: 0.2s all;
+    border-radius: 40px;
+    &:focus{
+        outline-style: none !important;
+    }
+}
+
+.button-gold{
+    background: white;
+    border: 1px solid $color-accent-primary;
+    &:hover{
+        color: white;
+        background: $color-accent-primary;
+        border: 1px solid $color-accent-primary;
+    }
+}
+
+@media (min-width: $md){
+    .button-main{
+      padding: 13px 25px;
+      font-size: 18px;
+    }
+  }
