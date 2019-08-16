@@ -1,0 +1,97 @@
+.comingsoon{
+    font-family: $font-family-primary;
+
+    height: 100vh;
+  
+    display: flex;
+    align-items: stretch;
+    
+    background: linear-gradient(to bottom, rgba(97,144,232,0.9) 0%, rgba(255,255,255,0.7) 70%), url('/images/backgrounds/mountains.jpg') 100% 100% no-repeat;
+    background-size: cover;
+
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .content{
+        padding: 10px;
+    }
+
+    .left{
+        background-color: rgba(255, 255, 255, 0.8);
+        .content .input-container{
+            width: 100% !important;
+        }
+        .contact-form{
+            width: 75%;
+            box-shadow: none;
+            margin: 50px 0;
+            padding-left: 0px;
+            padding-right: 0px;
+            .input-label,
+            .input{
+                padding-left: 0;
+            }
+        }
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+    p {
+      color: #000;
+      font-size: 12px;
+      font-weight: 400;
+  
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+    .home-btn, 
+    .contact-btn {
+      display: inline-block;
+      padding: 8px 20px;
+      margin: 7px;
+  
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-accent-primary;
+      
+      -webkit-transition: 0.2s all;
+      transition: 0.2s all;
+      
+      background: white;
+      border: 1px solid $color-accent-primary;
+      border-radius: 40px;
+      &:hover{
+        color: white;
+        background: $color-accent-primary;
+        border: 1px solid $color-accent-primary;
+      }
+      &:focus{
+        outline-style: none !important;
+      }
+    }
+  } 
+  @media (min-width: $sm){
+    .comingsoon .home-btn, 
+    .comingsoon .contact-btn {
+      padding: 13px 25px;
+      font-size: 18px;
+    }
+    .comingsoon .title{
+      font-size: 80px;
+    }
+    .comingsoon h1 {
+      font-size: 24px;
+    }
+    .comingsoon p {
+      font-size: 14px;
+    }
+  }

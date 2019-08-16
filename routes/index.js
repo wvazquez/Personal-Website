@@ -7,8 +7,7 @@ require('dotenv').config({});
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var dev = res.app.get("env") === 'development' ? true: false;
-  console.log(dev);
-  res.render('index', {
+  res.render('comingsoon', {
                         development: dev,
                         helpers: {
                           multiply : function(a, b) { return a * b; }
