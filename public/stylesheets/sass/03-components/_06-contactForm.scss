@@ -13,8 +13,8 @@
   .input-container{
     width: 100%;
     padding-bottom: 13px;
-    margin-bottom: 65px;
-
+    
+    margin-bottom: 10px;
     border-bottom: 2px solid rgb(217, 217, 217);
 
     &.message {
@@ -27,27 +27,28 @@
   }
  
   .input-label {
-    font-size: 15px;
+    font-size: 9px;
     color: rgb(153, 153, 153);
 
     line-height: 1.5;
     padding-left: 5px;
   }
   .input {
-    font-size: 18px;
+    font-size: 12px;
     color: #555555;
 
     display: block;
     width: 100%;
     line-height: 1.2;
     padding: 0 5px;
-    margin-top: 15px;
+    margin-top: 5px;
 
     border: none;
     background: transparent;
-    &::placeholder{ 
-    color: #555555;
+    &::placeholder{
+        color: transparent;
     }
+
     &:focus{
       border-color: transparent !important;
       outline-style: none; 
@@ -86,44 +87,15 @@
     }
   }
 
-  .contact-button-container {
-    display: flex;
-    flex-wrap: wrap;
+  // .contact-button-container {
+    // display: flex;
+    // flex-wrap: wrap;
 
-    width: 100%;
-    margin-top: -25px;
+    // width: 100%;
+    // margin-top: -25px;
 
-    .contact-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
 
-      font-size: 12px;
-      color: #fff;
-
-      line-height: 1.2;
-      padding: 0 10px;
-      min-width: 100px;
-      height: 30px;
-
-      background-color: $color-accent-primary;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-
-      transition: all 0.4s;
-      
-      & i {
-          transition: all 0.4s;
-      }
-      &:hover {
-          background-color: #ff4b5a;
-          box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
-      }
-      &:hover i {
-          transform: translateX(10px);
-      }
-    }
-  }
+  // }
   .alert-validate{
     &::before {
       content: attr(data-validate);
@@ -188,13 +160,22 @@
   .contact .contact-form {
     padding: 100px 50px;
   }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder{ 
+    color: rgba(85, 85, 85,0.5);
+  }
+  .input-label {
+    font-size: 15px;
+  }
+  .input {
+    font-size: 18px;
+    margin-top: 15px;
+  }
 }
 
 @media (min-width: $sm) {
-  .contact-form .contact-button-container .contact-button{
-    font-size: 16px;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
+  
+  .input-container{
+    margin-bottom: 65px;
   }
 }
