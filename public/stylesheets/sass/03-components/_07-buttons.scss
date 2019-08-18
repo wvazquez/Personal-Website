@@ -36,7 +36,7 @@
     font-size: 12px;
     line-height: 1.2;
     padding: 0 10px;
-    height: 25px;
+    height: 30px;
     min-width: 90px;
     
     color: #fff;
@@ -54,15 +54,6 @@
     }
     &:hover i {
         transform: translateX(10px);
-    }
-}
-
-
-
-
-@media (min-width: $sm){
-    .button-submit{
-        height: 30px;
     }
 }
 
