@@ -3201,9 +3201,10 @@ footer {
   height: 100vh;
   background: url("/images/backgrounds/mountains.jpg") 100% 100% no-repeat;
   background-size: cover; }
+  .comingsoon .content .contact-form {
+    display: none; }
   .comingsoon .content {
-    padding: 10px;
-    text-align: center; }
+    padding: 10px; }
   .comingsoon h1 {
     font-size: 16px;
     font-weight: 800;
@@ -3212,6 +3213,25 @@ footer {
     font-size: 12px;
     font-weight: 400;
     margin-bottom: 10px; }
+
+@media (min-width: 576px) {
+  .comingsoon {
+    display: flex;
+    align-items: stretch; }
+    .comingsoon section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+    .comingsoon > section:first-child {
+      background-color: rgba(255, 255, 255, 0.8); }
+    .comingsoon .content .contact-form {
+      display: block; }
+    .comingsoon a[data-toggle="modal"] {
+      display: none; }
+    .comingsoon .content {
+      width: 95%;
+      max-width: 700px; } }
 
 @media (min-width: 768px) {
   .comingsoon h1 {

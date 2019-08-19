@@ -1,23 +1,21 @@
 .comingsoon{
   font-family: $font-family-primary;
   height: 100vh;
-  // display: flex;
-  // align-items: stretch;
+
   background: url('/images/backgrounds/mountains.jpg') 100% 100% no-repeat;
   background-size: cover;
-  section{
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // width: 100%;
+
+  // a[data-toggle="modal"]{
+    
+  // }
+  .content .contact-form{
+    display: none;
   }
   .content{
       padding: 10px;
-      text-align: center;
+      // text-align: center;
   }
-  & > section:first-child{
-    // background-color: rgba(255, 255, 255, 0.8);
-  }
+  
   h1 {
     font-size: 16px;
     font-weight: 800;
@@ -29,6 +27,32 @@
     margin-bottom: 10px;
   }
 } 
+@media(min-width: $sm){
+  .comingsoon{
+    display: flex;
+    align-items: stretch;
+    section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    & > section:first-child{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .content .contact-form{
+      display: block;
+    }
+    a[data-toggle="modal"]{
+      display: none;
+    }
+    .content{
+      width: 95%;
+      max-width: 700px;
+    }
+  }
+}
+
 @media (min-width: $md){
   .comingsoon h1 {
     font-size: 24px;

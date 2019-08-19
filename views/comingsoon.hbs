@@ -3,7 +3,9 @@
         <div class="content">
             <h1>My website is coming soon,</h1>
             <p>in the meantime, feel free to contact me!</p>
-            {{!-- {{> components/contactForm}} --}}
+            {{> components/contactForm}}
+            <a href="#" class="button-main button-gold" data-toggle="modal" data-target="#contact-modal">Contact Me</a>
+
             {{> components/icon-unit}}
         </div>
     </section>
@@ -12,7 +14,6 @@
         <div class="content">
             <p>You can visit the current state of the website.</p>
             <a href="/home" class="button-main button-gold">&nbsp;Homepage&nbsp;</a>
-            <a href="#" class="button-main button-gold" data-toggle="modal" data-target="#contact-modal">Contact Me</a>
         </div>
     </section>
     {{> components/modal}}
