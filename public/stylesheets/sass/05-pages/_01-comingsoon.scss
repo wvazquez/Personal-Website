@@ -1,19 +1,29 @@
 .comingsoon{
   font-family: $font-family-primary;
-  height: 100vh;
-
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: url('/images/backgrounds/mountains.jpg') 100% 100% no-repeat;
   background-size: cover;
-
-  // a[data-toggle="modal"]{
-    
-  // }
+  & > section:first-child{
+    // background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid $color-accent-primary;
+    margin-bottom: 20px;  
+  }
+  & > section:last-child{
+    margin-top: 20px; 
+  }
+  .icon-unit{
+    margin-bottom: 0;
+  }
   .content .contact-form{
     display: none;
   }
   .content{
       padding: 10px;
-      // text-align: center;
+      text-align: center;
   }
   
   h1 {
@@ -29,22 +39,31 @@
 } 
 @media(min-width: $sm){
   .comingsoon{
-    display: flex;
     align-items: stretch;
+    flex-direction: row;
     section{
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
+        
     }
     & > section:first-child{
       background-color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0px; 
+    }
+    & > section:last-child{
+      margin-top: 0px; 
     }
     .content .contact-form{
       display: block;
+      background-color: white;
+      text-align: left;
     }
-    a[data-toggle="modal"]{
-      display: none;
+    a[data-toggle="modal"],
+    .modal#contact-modal,
+    div .modal-backdrop .show .fade{
+      display: none !important;
     }
     .content{
       width: 95%;
@@ -63,6 +82,7 @@
   }
   .comingsoon .input-container{
     margin-bottom: 45px;
+    width: 100%; //overrides fault contact-form styles
   }
   
 }
