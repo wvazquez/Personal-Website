@@ -2783,7 +2783,8 @@ section.about h2, .work h2, .contact h2 {
 
 .modal .modal-title {
   border-bottom: #c99065 1px solid;
-  padding-bottom: 1%; }
+  padding-bottom: 1%;
+  font-size: 12px; }
 
 .modal .close {
   position: absolute;
@@ -2796,7 +2797,7 @@ section.about h2, .work h2, .contact h2 {
   padding: 0; }
 
 .modal .contact-form {
-  padding: 10px;
+  padding-top: 0px;
   box-shadow: none; }
 
 @media (min-width: 992px) {
@@ -2804,7 +2805,9 @@ section.about h2, .work h2, .contact h2 {
     margin: 10px 0 50px 0; }
   .modal .close {
     right: 20px;
-    top: 0; } }
+    top: 0; }
+  .modal .modal-title {
+    font-size: 18px; } }
 
 .contact-form {
   display: flex;
@@ -2817,30 +2820,31 @@ section.about h2, .work h2, .contact h2 {
   box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4); }
   .contact-form .input-container {
     width: 100%;
-    padding-bottom: 13px;
-    margin-bottom: 65px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     border-bottom: 2px solid #d9d9d9; }
-    .contact-form .input-container.message {
-      width: 100%; }
-    .contact-form .input-container.validate-input {
-      position: relative; }
+  .contact-form .message {
+    width: 100%;
+    margin-bottom: 25px; }
+  .contact-form .validate-input {
+    position: relative; }
   .contact-form .input-label {
-    font-size: 15px;
+    font-size: 12px;
     color: #999999;
     line-height: 1.5;
     padding-left: 5px; }
   .contact-form .input {
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
     display: block;
     width: 100%;
     line-height: 1.2;
     padding: 0 5px;
-    margin-top: 15px;
+    margin-top: 5px;
     border: none;
     background: transparent; }
     .contact-form .input::placeholder {
-      color: #555555; }
+      color: transparent; }
     .contact-form .input:focus {
       border-color: transparent !important;
       outline-style: none; }
@@ -2866,32 +2870,6 @@ section.about h2, .work h2, .contact h2 {
       left: 0;
       background: #c99065;
       transition: all 0.4s; }
-  .contact-form .contact-button-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: -25px; }
-    .contact-form .contact-button-container .contact-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 12px;
-      color: #fff;
-      line-height: 1.2;
-      padding: 0 10px;
-      min-width: 100px;
-      height: 30px;
-      background-color: #c99065;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-      transition: all 0.4s; }
-      .contact-form .contact-button-container .contact-button i {
-        transition: all 0.4s; }
-      .contact-form .contact-button-container .contact-button:hover {
-        background-color: #ff4b5a;
-        box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
-      .contact-form .contact-button-container .contact-button:hover i {
-        transform: translateX(10px); }
   .contact-form .alert-validate::before {
     content: attr(data-validate);
     font-size: 13px;
@@ -2925,26 +2903,84 @@ section.about h2, .work h2, .contact h2 {
     visibility: visible;
     opacity: 1; }
 
-@media (min-width: 992px) {
-  .input-container {
-    width: 40% !important; }
-    .input-container.message {
-      width: 100% !important; }
-  .contact .contact-form {
-    width: 75%; }
-  .modal .contact-form {
-    padding: 50px 50px 68px 50px; } }
+@media (min-width: 576px) {
+  .contact-form {
+    padding: 100px 50px; }
+  .contact-form .input-label {
+    font-size: 14px; }
+  .contact-form .input {
+    font-size: 16px; } }
 
 @media (min-width: 768px) {
-  .contact .contact-form {
-    padding: 100px 50px; } }
+  .contact-form {
+    width: 75%; }
+    .contact-form .input-container {
+      margin-bottom: 65px; }
+    .contact-form .input {
+      font-size: 18px; } }
 
-@media (min-width: 576px) {
-  .contact-form .contact-button-container .contact-button {
+@media (min-width: 992px) {
+  .contact-form .input-container {
+    width: 45%; }
+    .contact-form .input-container.message {
+      width: 100%; }
+  .contact-form .input::placeholder {
+    color: rgba(85, 85, 85, 0.5); } }
+
+.button-main {
+  display: inline-block;
+  padding: 8px 20px;
+  margin: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #c99065;
+  transition: 0.2s all;
+  border-radius: 40px; }
+  .button-main:focus {
+    outline-style: none !important; }
+  .button-main:hover {
+    text-decoration: none; }
+
+.button-gold {
+  background: white;
+  border: 1px solid #c99065; }
+  .button-gold:hover {
+    color: white;
+    background: #c99065;
+    border: 1px solid #c99065; }
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.2;
+  padding: 0 10px;
+  height: 30px;
+  min-width: 90px;
+  color: #fff;
+  background-color: #c99065;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  transition: all 0.4s; }
+  .button-submit i {
+    transition: all 0.4s; }
+  .button-submit:hover {
+    background-color: #ff4b5a;
+    box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5); }
+  .button-submit:hover i {
+    transform: translateX(10px); }
+
+@media (min-width: 768px) {
+  .button-main {
+    font-size: 18px;
+    padding: 13px 25px; }
+  .button-submit {
     font-size: 16px;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px; } }
+    padding: 0 30px;
+    height: 40px; } }
 
 .header {
   z-index: 2000 !important;
@@ -3151,35 +3187,8 @@ footer {
     font-weight: 400;
     margin-bottom: 20px;
     margin-top: 0px; }
-  #notfound .home-btn,
-  #notfound .contact-btn {
-    display: inline-block;
-    padding: 8px 20px;
-    margin: 7px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #c99065;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
-    background: white;
-    border: 1px solid #c99065;
-    border-radius: 40px; }
-    #notfound .home-btn:hover,
-    #notfound .contact-btn:hover {
-      color: white;
-      background: #c99065;
-      border: 1px solid #c99065; }
-    #notfound .home-btn:focus,
-    #notfound .contact-btn:focus {
-      outline-style: none !important; }
 
 @media (min-width: 576px) {
-  #notfound .home-btn,
-  #notfound .contact-btn {
-    padding: 13px 25px;
-    font-size: 18px; }
   #notfound .title {
     font-size: 80px; }
   #notfound h2 {

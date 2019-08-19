@@ -2,52 +2,46 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  width: 100%;
+  width: 100%; 
   padding: 20px 10px;
   margin: 0 auto;
-
   border-radius: 10px 10px 10px 10px;
   box-shadow: 0px 0px 25px 4px rgba(153, 153, 153, 0.4);
-    
+ 
   .input-container{
-    width: 100%;
-    padding-bottom: 13px;
-    margin-bottom: 65px;
-
+    width: 100%; 
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     border-bottom: 2px solid rgb(217, 217, 217);
-
-    &.message {
-      width: 100%;
-    }
-    
-    &.validate-input {
-      position: relative;
-    }
+  }
+  .message {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .validate-input {
+    position: relative;
   }
  
   .input-label {
-    font-size: 15px;
+    font-size: 12px;
     color: rgb(153, 153, 153);
-
     line-height: 1.5;
     padding-left: 5px;
   }
   .input {
-    font-size: 18px;
+    font-size: 14px;
     color: #555555;
-
     display: block;
-    width: 100%;
+    width: 100%; 
     line-height: 1.2;
     padding: 0 5px;
-    margin-top: 15px;
-
+    margin-top: 5px;
     border: none;
     background: transparent;
-    &::placeholder{ 
-    color: #555555;
+    &::placeholder{
+        color: transparent;
     }
+
     &:focus{
       border-color: transparent !important;
       outline-style: none; 
@@ -86,44 +80,6 @@
     }
   }
 
-  .contact-button-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    width: 100%;
-    margin-top: -25px;
-
-    .contact-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      font-size: 12px;
-      color: #fff;
-
-      line-height: 1.2;
-      padding: 0 10px;
-      min-width: 100px;
-      height: 30px;
-
-      background-color: $color-accent-primary;
-      border-radius: 25px;
-      box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-
-      transition: all 0.4s;
-      
-      & i {
-          transition: all 0.4s;
-      }
-      &:hover {
-          background-color: #ff4b5a;
-          box-shadow: 0 10px 30px 0px rgba(255, 75, 90, 0.5);
-      }
-      &:hover i {
-          transform: translateX(10px);
-      }
-    }
-  }
   .alert-validate{
     &::before {
       content: attr(data-validate);
@@ -169,32 +125,37 @@
   }     
 }
   
-@media (min-width: $lg) {  
-  .input-container{
-    width: 40% !important;
-    &.message {
-      width: 100% !important;
-    }
-  }
-  .contact .contact-form{
-    width: 75%;
-  }
-  .modal .contact-form{
-    padding: 50px 50px 68px 50px;
-  }
-}
-
-@media (min-width: $md) {
-  .contact .contact-form {
+@media (min-width: $sm) {
+  .contact-form {
     padding: 100px 50px;
   }
+  .contact-form .input-label{
+    font-size: 14px;
+  }
+  .contact-form .input{
+    font-size: 16px;
+  }
+}
+@media (min-width: $md) {
+  .contact-form{
+    width: 75%;
+    .input-container{
+      margin-bottom: 65px;
+    }
+    .input{
+      font-size: 18px;
+    }
+  }
 }
 
-@media (min-width: $sm) {
-  .contact-form .contact-button-container .contact-button{
-    font-size: 16px;
-    padding: 0 20px;
-    min-width: 160px;
-    height: 50px;
+@media (min-width: $lg) {  
+  .contact-form .input-container{
+    width: 45%;
+    &.message {
+      width: 100%;
+    }
+  }
+  .contact-form .input::placeholder{ 
+      color: rgba(85, 85, 85,0.5);
   }
 }
