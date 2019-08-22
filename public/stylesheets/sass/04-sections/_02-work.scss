@@ -25,12 +25,12 @@
             background-size: cover;
             text-align: center;
             height: 250px;
-            width: 25%;
+            width: 100%;
             position: relative;
             overflow: hidden;
-            &:hover .project-overlay{
-                top: 0%;       
-            }
+            // &:hover .project-overlay{
+            //     top: 0% !important;       
+            // }
           }
           &-overlay{
             background-color: transparentize($color-accent-primary, 0.18);
@@ -45,6 +45,7 @@
             justify-content: center;
             align-items: center;
             .title{
+                font-size: 1em;
                 color: white;
                 font-weight: 100;
                 text-transform: uppercase;
@@ -101,4 +102,34 @@
             }
         }
     }
+}
+
+@media(min-width: $sm){
+    .work{
+        .project-unit{
+            width: 50%;
+            &:hover .project-overlay{
+                top: 0% !important;       
+            }
+        }
+
+    }
+}
+@media(min-width: $md){
+    .work{
+        .project-unit{
+            width: 33%;
+        }
+    }
+}
+@media(min-width: $lg){
+    .work{
+        .project-unit{
+            width: 25%;
+        }
+        .project-overlay .title{
+            font-size: 1.5em;
+        }
+    }
+
 }
