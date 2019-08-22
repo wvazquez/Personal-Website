@@ -45,6 +45,7 @@
             justify-content: center;
             align-items: center;
             .title{
+                font-size: 1em;
                 color: white;
                 font-weight: 100;
                 text-transform: uppercase;
@@ -126,5 +127,9 @@
         .project-unit{
             width: 25%;
         }
+        .project-overlay .title{
+            font-size: 1.5em;
+        }
     }
+
 }
