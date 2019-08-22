@@ -36,14 +36,19 @@ $( document ).ready(function() {
     console.log(($viewportheight-250)/2);
     let roootmargin = ($viewportheight-250)/2;
     let rootthreshold = 1;
+    console.log(roootmargin);
+    if(roootmargin < 0){
+        roootmargin += roootmargin;
+        console.log(roootmargin);
+    }else{
+        roootmargin = 0 - roootmargin;
+    }
     if($viewportheight < 300){
         roootmargin = 0;
         rootthreshold = 0.5;
     }
-    if(roootmargin < 0){
-        roootmargin += roootmargin;
-        console.log(roootmargin);
-    }
+    console.log(roootmargin);
+    
     var targets = $('.project-unit');
     const options = {
         root: null,

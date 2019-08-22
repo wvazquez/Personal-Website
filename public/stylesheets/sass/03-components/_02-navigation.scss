@@ -27,8 +27,11 @@ nav{
         }
     }
 }
-.inline-nav{
+ .inline-nav{
     display: none;
+}
+.footer .inline-nav{
+    display: block;
 }
 
 @media(min-width: $sm){

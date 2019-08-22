@@ -2720,6 +2720,9 @@ nav a {
 .inline-nav {
   display: none; }
 
+.footer .inline-nav {
+  display: block; }
+
 @media (min-width: 576px) {
   .slideout-nav,
   div.nav-toggler {
