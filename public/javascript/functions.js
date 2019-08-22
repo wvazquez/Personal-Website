@@ -1,7 +1,7 @@
 import { smoothScroll } from "./smoothScroll.js";
-import { getProject, returnToProjectOverview } from "./projects.js";
+import { getProject, returnToProjectOverview,showTilesOnScroll } from "./projects.js";
 import { form } from "./emailSubmit.js";
-import { videoSetup } from "./video.js";
+// import { videoSetup } from "./video.js";
 import { modal } from './modal.js';
 import {toggle } from './toggleNavigation.js';
 
@@ -20,13 +20,18 @@ $( document ).ready(function() {
     $('.validate-form').on('submit',form);
 
     // handles video setup and reload
-    videoSetup();
-    $(window).on('resize', videoSetup);
+    // videoSetup();
+    // $(window).on('resize', videoSetup);
 
     //handles contact modal on 404 page.
     $('#notfound .contact-btn').on('click', modal);
 
     $('.nav-toggler').on('click', toggle);
     $('.slideout-container').on('click', toggle);
+    let $sm = 576;
+    if($(window).width() <= $sm){
+        showTilesOnScroll();
+    }
+    
 
 });

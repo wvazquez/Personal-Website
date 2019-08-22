@@ -3172,7 +3172,7 @@ section.about {
       background-size: cover;
       text-align: center;
       height: 250px;
-      width: 25%;
+      width: 100%;
       position: relative;
       overflow: hidden; }
       .work .project-unit:hover .project-overlay {
@@ -3230,6 +3230,21 @@ section.about {
       .work .project-overview .project-content {
         max-width: 100%;
         background: darkgray; }
+
+.project-overlay.project-overlay-active {
+  top: 0 !important; }
+
+@media (min-width: 576px) {
+  .work .project-unit {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .work .project-unit {
+    width: 33%; } }
+
+@media (min-width: 992px) {
+  .work .project-unit {
+    width: 25%; } }
 
 .contact {
   margin-bottom: 100px;

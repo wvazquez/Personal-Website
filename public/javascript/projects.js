@@ -35,3 +35,31 @@ function setProject(data){
     });
 
 }
+
+export function showTilesOnScroll(){
+    let targets = $('.project-unit');
+    const options = {
+        root: null,
+        threshold: 1,
+        rootMargin: '-125px 0px'
+    };
+    
+    const observer = new IntersectionObserver(callback,options);
+
+    function callback(entries, observer){
+        entries.forEach(entry =>{
+            if(entry.isIntersecting){
+                console.log(entry);
+                $(entry.target).children('.project-overlay').css("top", 0);
+            }else{
+                $(entry.target).children('.project-overlay').css("top", '100%');
+
+                // $(entry.target).children('.project-overlay').removeClass(".project-overlay-active");
+            }
+        });
+    }
+
+    targets.each((index,target)=>{
+        observer.observe(target);
+    });
+}
