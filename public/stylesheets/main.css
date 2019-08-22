@@ -2672,20 +2672,28 @@ section.about h2, .work h2, .contact h2 {
 .skills {
   max-width: 750px;
   color: #999;
-  margin: 100px auto;
+  margin: 30px auto 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
   .skills .skill-unit {
+    margin: 0 auto 10px;
     text-align: left;
     width: 350px; }
-    .skills .skill-unit .skill-title {
-      margin-bottom: 5px; }
-    .skills .skill-unit .skill-rating {
-      background-color: #e5eaee; }
-      .skills .skill-unit .skill-rating div {
-        height: 8px;
-        background-color: #c99065; }
+  .skills .skill-title {
+    margin-bottom: 5px;
+    font-size: 1.2em; }
+  .skills .skill-rating {
+    background-color: #e5eaee; }
+    .skills .skill-rating div {
+      height: 8px;
+      background-color: #c99065; }
+
+@media (min-width: 576px) {
+  .skills {
+    margin: 100px auto; }
+    .skills .skill-title {
+      font-size: 1.75em; } }
 
 nav a {
   text-decoration: none !important;
