@@ -28,9 +28,9 @@
             width: 100%;
             position: relative;
             overflow: hidden;
-            &:hover .project-overlay{
-                top: 0%;       
-            }
+            // &:hover .project-overlay{
+            //     top: 0% !important;       
+            // }
           }
           &-overlay{
             background-color: transparentize($color-accent-primary, 0.18);
@@ -102,14 +102,16 @@
         }
     }
 }
-.project-overlay.project-overlay-active{
-    top:0 !important;
-}
+
 @media(min-width: $sm){
     .work{
         .project-unit{
             width: 50%;
+            &:hover .project-overlay{
+                top: 0% !important;       
+            }
         }
+
     }
 }
 @media(min-width: $md){

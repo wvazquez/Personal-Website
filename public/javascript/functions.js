@@ -1,5 +1,5 @@
 import { smoothScroll } from "./smoothScroll.js";
-import { getProject, returnToProjectOverview,showTilesOnScroll } from "./projects.js";
+import { getProject, returnToProjectOverview } from "./projects.js";
 import { form } from "./emailSubmit.js";
 // import { videoSetup } from "./video.js";
 import { modal } from './modal.js';
@@ -28,10 +28,46 @@ $( document ).ready(function() {
 
     $('.nav-toggler').on('click', toggle);
     $('.slideout-container').on('click', toggle);
+
     let $sm = 576;
-    if($(window).width() <= $sm){
-        showTilesOnScroll();
+    let $windowsize=$(window).width();
+    var targets = $('.project-unit');
+    const options = {
+        root: null,
+        threshold: 1,
+        rootMargin: '-125px 0px'
+    };
+    
+    const observer = new IntersectionObserver(callback,options);
+    function callback(entries, observer){
+        entries.forEach(entry =>{
+            if(entry.isIntersecting){
+                console.log(entry);
+                $(entry.target).children('.project-overlay').css("top", 0);
+            }else{
+                $(entry.target).children('.project-overlay').css("top", '100%');
+            }
+        });
     }
     
+    if($windowsize <= $sm){
+        targets.each((index,target)=>{
+            observer.observe(target);
+        });   
+    }
+    $(window).on('resize', function(){
+        $windowsize = $(window).width();
 
+        if($windowsize <= $sm){
+             
+            targets.each((index,target)=>{
+                observer.observe(target);
+            });   
+        }else{
+            targets.each((index,target)=>{
+                $(target).children('.project-overlay').removeAttr('style');
+                observer.unobserve(target);
+            });
+        }
+    });
 });

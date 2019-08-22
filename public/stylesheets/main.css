@@ -3175,8 +3175,6 @@ section.about {
       width: 100%;
       position: relative;
       overflow: hidden; }
-      .work .project-unit:hover .project-overlay {
-        top: 0%; }
     .work .project-overlay {
       background-color: rgba(201, 144, 101, 0.82);
       cursor: pointer;
@@ -3231,12 +3229,11 @@ section.about {
         max-width: 100%;
         background: darkgray; }
 
-.project-overlay.project-overlay-active {
-  top: 0 !important; }
-
 @media (min-width: 576px) {
   .work .project-unit {
-    width: 50%; } }
+    width: 50%; }
+    .work .project-unit:hover .project-overlay {
+      top: 0% !important; } }
 
 @media (min-width: 768px) {
   .work .project-unit {
