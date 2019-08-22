@@ -1,5 +1,5 @@
 
-const menu    = $('.slideout-nav');
+const menu    = $('.slideout-container');
 const toggler = $('.nav-toggler');
 
 /*

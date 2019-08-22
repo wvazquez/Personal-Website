@@ -27,4 +27,6 @@ $( document ).ready(function() {
     $('#notfound .contact-btn').on('click', modal);
 
     $('.nav-toggler').on('click', toggle);
+    $('.slideout-container').on('click', toggle);
+
 });

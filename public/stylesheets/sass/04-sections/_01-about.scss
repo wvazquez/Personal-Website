@@ -20,12 +20,19 @@ section.about{
     .about-desc{
         font-family: $font-family-primary;
         max-width: 650px;
-        font-size: 1.6em;
-        margin: 50px auto;
+        font-size: 1em;
+        margin: 20px auto;
         padding: 15px;
         font-weight: 100;
         span{
             font-weight: 400;
         }
+    }
+}
+
+@media(min-width: $sm){
+    section.about .about-desc {
+        font-size: 1.6em;
+        margin: 50px auto;
     }
 }

@@ -9,7 +9,6 @@ nav{
     }
 }
 
-
 .navigation{
     flex:1;
     display: flex;
@@ -50,6 +49,9 @@ nav{
 }
 
 .nav-toggler{
+    z-index: 10;
+    position: fixed;
+    right: 10px;
     // z-index: 999;
     height: 28px;
     width: 28px;
@@ -59,15 +61,19 @@ nav{
     margin-left: auto;
     display: flex;
     align-items: center;
+    background-color: transparent;
+    
+    border-radius: 5px;
     .toggler{
         &,
         &::before,
         &::after {
+            // padding: 10px;
             position: absolute;
             content: '';
             width: 28px;
             height: 2.5px;
-            background: #fafafa;
+            background: $color-accent-primary;
             border-radius: 20px;
             transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
         }
@@ -86,7 +92,7 @@ nav{
 
     &.active > span::before,
     &.active > span::after {
-        background: #005c9c;
+        background: $color-accent-primary;
         top: 0px;
     }
 
@@ -98,34 +104,45 @@ nav{
         transform: rotate(225deg);
     }
 }
+
+.slideout-container{
+    z-index: 10;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left: -100%;
+    background: rgba(127, 127, 127,0);
+    transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1);
+    &.active {
+        left: 0;
+    }
+}
 .slideout-nav {
+
+    
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-    // text-align: center;
 
     height: 100vh;
     width: 30%;
-    // padding: 100px;
 
-    position: absolute;
-    top:0;
-    left: -30%;
+    
+    // top:0;
+    // left: -30%;
     color: #005c9c;
     background: rgba(#fafafa,1);
     // clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
             
-    transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
+    // transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1);
     
     @media only screen and (max-width: 600px) {
-      width: 250px;
-      left: -250px;
+    //   width: 250px;
+    //   left: -250px;
     //   padding: 50px;
     }
-    &.active {
-      left: 0;
-    }
+    // &.active {
+    //   left: 0;
+    // }
     p {
       font-size: 1.4rem;
       margin-bottom: 1rem;

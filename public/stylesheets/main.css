@@ -2724,19 +2724,24 @@ nav a {
       margin-right: 20px; } }
 
 .nav-toggler {
+  z-index: 10;
+  position: fixed;
+  right: 10px;
   height: 28px;
   width: 28px;
   outline: none;
   cursor: pointer;
   margin-left: auto;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px; }
   .nav-toggler .toggler, .nav-toggler .toggler::before, .nav-toggler .toggler::after {
     position: absolute;
     content: '';
     width: 28px;
     height: 2.5px;
-    background: #fafafa;
+    background: #c99065;
     border-radius: 20px;
     transition: 500ms cubic-bezier(0.77, 0, 0.175, 1); }
   .nav-toggler .toggler::before {
@@ -2747,30 +2752,31 @@ nav a {
     background: transparent; }
   .nav-toggler.active > span::before,
   .nav-toggler.active > span::after {
-    background: #005c9c;
+    background: #c99065;
     top: 0px; }
   .nav-toggler.active > span::before {
     transform: rotate(-225deg); }
   .nav-toggler.active > span::after {
     transform: rotate(225deg); }
 
+.slideout-container {
+  z-index: 10;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background: rgba(127, 127, 127, 0);
+  transition: 200ms left cubic-bezier(0.77, 0, 0.175, 1); }
+  .slideout-container.active {
+    left: 0; }
+
 .slideout-nav {
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 30%;
-  position: absolute;
-  top: 0;
-  left: -30%;
   color: #005c9c;
-  background: #fafafa;
-  transition: 300ms left cubic-bezier(0.77, 0, 0.175, 1); }
-  @media only screen and (max-width: 600px) {
-    .slideout-nav {
-      width: 250px;
-      left: -250px; } }
-  .slideout-nav.active {
-    left: 0; }
+  background: #fafafa; }
   .slideout-nav p {
     font-size: 1.4rem;
     margin-bottom: 1rem; }
@@ -3124,12 +3130,17 @@ section.about {
   section.about .about-desc {
     font-family: "Raleway", sans-serif;
     max-width: 650px;
-    font-size: 1.6em;
-    margin: 50px auto;
+    font-size: 1em;
+    margin: 20px auto;
     padding: 15px;
     font-weight: 100; }
     section.about .about-desc span {
       font-weight: 400; }
+
+@media (min-width: 576px) {
+  section.about .about-desc {
+    font-size: 1.6em;
+    margin: 50px auto; } }
 
 .work {
   background-color: #e5eaee;
