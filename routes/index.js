@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const config = require('../config');
 const nodemailer = require('nodemailer');
+const axios = require('axios')
 require('dotenv').config({});
 
 /* GET home page. */
@@ -30,7 +31,15 @@ router.get('/projects/:projectID', (req,res)=>{
     });
     res.json(project);
 });
+router.post('/recaptcha', (req,res)=>{
+  console.log("THis is the req.body: ", req.body["g-recaptcha-response"]);
+  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=my_key&response=${req.body["g-recaptcha-response"]}`;
 
+  axios.post(verifyURL).then(function(response){
+    console.log("this is the responsse: ", response);
+    res.json(response);
+  });
+});
 router.post('/sendemail', function(req,res){
   console.log(req.body);
 

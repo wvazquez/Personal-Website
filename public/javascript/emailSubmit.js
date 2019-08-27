@@ -2,9 +2,14 @@ var $name = $('#input-name');
 var $email= $('#input-email');
 var $message = $('#input-message');
 var input = $('.validate-input .input');
+
 var allValidated;
 export function form(event) {
     event.preventDefault();
+    const $recaptch = $('#g-recaptcha-response');
+    console.log($recaptch.val());
+    reCaptcha($recaptch);
+    
     allValidated = true;
     var data = {};
 
@@ -17,7 +22,10 @@ export function form(event) {
     });
     focus();
     if(allValidated){
-        postData(data);
+        // const $recaptch = $('#g-recaptcha-response');
+        // console.log($recaptch);
+        // reCaptcha($recaptch);
+        // postData(data);
     }
 }
 function validate (input) {
@@ -49,7 +57,12 @@ function postData(data){
         $message.val("");
     });
 }
-    
+function reCaptcha(value){
+    $.post('/recaptcha', value, function(data){
+        console.log("This is the front eend data: ", data)
+    });
+
+}
 function focus(){
     input.each(function(){
 
