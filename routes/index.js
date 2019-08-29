@@ -32,16 +32,13 @@ router.get('/projects/:projectID', (req,res)=>{
     res.json(project);
 });
 router.post('/recaptcha', (req,res)=>{
-  console.log("THis is the req.body: ", req.body["g-recaptcha-response"]);
-  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=my_key&response=${req.body["g-recaptcha-response"]}`;
+  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${req.body["g-recaptcha-response"]}`;
 
   axios.post(verifyURL).then(function(response){
-    console.log("this is the responsse: ", response);
-    res.json(response);
+    res.json(response.data);
   });
 });
 router.post('/sendemail', function(req,res){
-  console.log(req.body);
 
   $name = req.body.name;
   $email = req.body.email;

@@ -4,14 +4,14 @@ var $message = $('#input-message');
 var input = $('.validate-input .input');
 
 var allValidated;
+
 export function form(event) {
     event.preventDefault();
-    const $recaptch = $('#g-recaptcha-response');
-    console.log($recaptch.val());
-    reCaptcha($recaptch);
     
+
     allValidated = true;
     var data = {};
+
 
     input.map(function(index,element){
         data[element.name] = element.value.trim(); 
@@ -22,11 +22,18 @@ export function form(event) {
     });
     focus();
     if(allValidated){
-        // const $recaptch = $('#g-recaptcha-response');
-        // console.log($recaptch);
-        // reCaptcha($recaptch);
-        // postData(data);
+        const $recaptcha = $('#g-recaptcha-response');
+        $.post('/recaptcha', $recaptcha, function(data){
+            if(data.success){
+                postData(data);
+            }
+        });
     }
+}
+function reCaptcha(value){
+    $.post('/recaptcha', value, function(data){
+        console.log("This is the front eend data: ", data)
+    });
 }
 function validate (input) {
     if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
@@ -57,12 +64,7 @@ function postData(data){
         $message.val("");
     });
 }
-function reCaptcha(value){
-    $.post('/recaptcha', value, function(data){
-        console.log("This is the front eend data: ", data)
-    });
 
-}
 function focus(){
     input.each(function(){
 
