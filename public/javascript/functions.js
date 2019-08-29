@@ -1,6 +1,6 @@
 import { smoothScroll } from "./smoothScroll.js";
 import { getProject, returnToProjectOverview } from "./projects.js";
-import { form } from "./emailSubmit.js";
+import { formSubmit } from "./emailSubmit.js";
 // import { videoSetup } from "./video.js";
 import { modal } from './modal.js';
 import {toggle } from './toggleNavigation.js';
@@ -17,7 +17,7 @@ $( document ).ready(function() {
     $('.back-arrow').on('click', returnToProjectOverview);
 
     // Handles email form submit
-    $('.validate-form').on('submit',form);
+    $('.validate-form').on('submit',formSubmit);
 
     // handles video setup and reload
     // videoSetup();
