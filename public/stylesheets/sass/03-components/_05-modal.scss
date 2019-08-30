@@ -1,4 +1,8 @@
 .modal{
+    .modal-content{
+        position: relative;
+    }
+    
     .modal-header{
         position: relative;
         border-bottom: none; // Overrides bootstrap default styles
@@ -19,11 +23,13 @@
         top: -5px;
     }
     .modal-body{
+        position: static !important;// Overrides bootstrap default styles
         padding: 0; // Overrides bootstrap default styles
     }
     .contact-form{
         padding-top: 0px; //overrides contactform style
         box-shadow: none;
+        position: static;
     }
     
     
