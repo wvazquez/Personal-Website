@@ -57,13 +57,26 @@ function hideInvalidMessage(input) {
 }
 
 function postData(data){
+    $('.loader-container').toggleClass('show-flex');
+    // setTimeout(function(){
+    //     $('.loader-container').toggleClass('show-flex');
+    //     $('.success-container').toggleClass('show-flex');
+    //     setTimeout(function(){
+    //         $('.success-container').toggleClass('show-flex');
+    //     },3000);
+    // }, 3000)
     $.post( '/sendemail', data, function(res){
         if(res === 'good'){
-            alert("success");
-            $name.val("");
-            $email.val("");
-            $message.val(""); 
-            grecaptcha.reset();  
+            $('.loader-container').toggleClass('show-flex');
+            $('.success-container').toggleClass('show-flex');
+            setTimeout(function(){
+                $name.val("");
+                $email.val("");
+                $message.val(""); 
+                grecaptcha.reset(); 
+                $('.success-container').toggleClass('show-flex');
+            },3000);
+             
         }else{
             alert('error');
         };
