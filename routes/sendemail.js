@@ -17,14 +17,14 @@ router.post('/', function(req,res){
         
         let mailerConfig = {    
           host: process.env.MAILER_HOST,  
-          secure: (dev) ? false : true,
+          secure: false,
           port: process.env.MAILER_PORT,
           auth: {
               user: process.env.AUTH_USER,
               pass: process.env.AUTH_PASS
           },
           tls:{
-            rejectUnauthorized: (dev) ? false : true
+            rejectUnauthorized: false
           }
         };
         let transporter = nodemailer.createTransport(mailerConfig);

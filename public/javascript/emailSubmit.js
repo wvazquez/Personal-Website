@@ -75,6 +75,7 @@ function postData(data){
             },3000);
         }else{
             alert('There was an error submiting your form. Please try again.');
+            $('.loader-container').toggleClass('show-flex');
         };
     });
 }
