@@ -76,10 +76,8 @@ function postData(data){
                 grecaptcha.reset(); 
                 $('.success-container').toggleClass('show-flex');
             },3000);
-             
         }else{
-            alert('error');
+            alert('There was an error submiting your form. Please try again.');
         };
-        
     });
 }

@@ -2935,6 +2935,9 @@ nav a {
   .contact-form .message {
     width: 100%;
     margin-bottom: 25px; }
+  .contact-form .input-recaptcha {
+    width: 100%;
+    border-bottom: none; }
   .contact-form .validate-input {
     position: relative; }
   .contact-form .input-label {
@@ -3098,12 +3101,14 @@ nav a {
     .contact-form .input-container {
       margin-bottom: 65px; }
     .contact-form .input {
-      font-size: 18px; } }
+      font-size: 18px; }
+    .contact-form .input-recaptcha {
+      margin-bottom: 15px; } }
 
 @media (min-width: 992px) {
   .contact-form .input-container {
     width: 45%; }
-    .contact-form .input-container.message {
+    .contact-form .input-container.message, .contact-form .input-container.input-recaptcha {
       width: 100%; }
   .contact-form .input::placeholder {
     color: rgba(85, 85, 85, 0.5); } }
