@@ -58,7 +58,7 @@ function hideInvalidMessage(input) {
 
 function postData(data){
     $('.loader-container').toggleClass('show-flex');
-
+    // $('.success-container').toggleClass('show-flex');
     $.post( '/sendemail', data, function(res){
         if(res === 'good'){
             $('.loader-container').toggleClass('show-flex');
@@ -69,6 +69,9 @@ function postData(data){
                 $message.val(""); 
                 grecaptcha.reset(); 
                 $('.success-container').toggleClass('show-flex');
+                if($("#contact-modal").data('bs.modal')){
+                    $('#contact-modal').modal('hide');
+                }            
             },3000);
         }else{
             alert('There was an error submiting your form. Please try again.');

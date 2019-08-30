@@ -2912,6 +2912,8 @@ nav a {
   padding-top: 0px;
   box-shadow: none;
   position: static; }
+  .modal .contact-form .success-container {
+    position: absolute; }
 
 @media (min-width: 992px) {
   .modal .modal-header {

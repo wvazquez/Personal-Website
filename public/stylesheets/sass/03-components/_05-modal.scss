@@ -30,6 +30,9 @@
         padding-top: 0px; //overrides contactform style
         box-shadow: none;
         position: static;
+        .success-container{
+            position: absolute;
+        }
     }
     
     
@@ -48,5 +51,4 @@
     .modal .modal-title{
         font-size: 18px;
     }
-
 }
