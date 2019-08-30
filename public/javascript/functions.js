@@ -1,6 +1,6 @@
 import { smoothScroll } from "./smoothScroll.js";
 import { getProject, returnToProjectOverview } from "./projects.js";
-import { form } from "./emailSubmit.js";
+import { formSubmit } from "./emailSubmit.js";
 // import { videoSetup } from "./video.js";
 import { modal } from './modal.js';
 import {toggle } from './toggleNavigation.js';
@@ -17,7 +17,7 @@ $( document ).ready(function() {
     $('.back-arrow').on('click', returnToProjectOverview);
 
     // Handles email form submit
-    $('.validate-form').on('submit',form);
+    $('.validate-form').on('submit',formSubmit);
 
     // handles video setup and reload
     // videoSetup();
@@ -32,14 +32,10 @@ $( document ).ready(function() {
     let $sm = 576;
     let $windowsize=$(window).width();
     let $viewportheight = $(window).height();
-    console.log($viewportheight);
-    console.log(($viewportheight-250)/2);
     let roootmargin = ($viewportheight-250)/2;
     let rootthreshold = 1;
-    console.log(roootmargin);
     if(roootmargin < 0){
         roootmargin += roootmargin;
-        console.log(roootmargin);
     }else{
         roootmargin = 0 - roootmargin;
     }
@@ -47,7 +43,6 @@ $( document ).ready(function() {
         roootmargin = 0;
         rootthreshold = 0.5;
     }
-    console.log(roootmargin);
     
     var targets = $('.project-unit');
     const options = {
@@ -55,13 +50,11 @@ $( document ).ready(function() {
         threshold: rootthreshold,
         rootMargin: `0px 0px ${roootmargin}px`
     };
-    console.log(options.threshold);
     const observer = new IntersectionObserver(callback,options);
     function callback(entries, observer){
         entries.forEach(entry =>{
             if(entry.isIntersecting){
                 $(entry.target).siblings().children('.project-overlay').css("top", '100%')
-                console.log(entry);
                 $(entry.target).children('.project-overlay').css("top", 0);
             }else{
                 $(entry.target).children('.project-overlay').css("top", '100%');

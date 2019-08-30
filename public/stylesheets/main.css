@@ -2882,6 +2882,9 @@ nav a {
     height: 50px;
     width: 50px; } }
 
+.modal .modal-content {
+  position: relative; }
+
 .modal .modal-header {
   position: relative;
   border-bottom: none;
@@ -2902,11 +2905,15 @@ nav a {
   top: -5px; }
 
 .modal .modal-body {
+  position: static !important;
   padding: 0; }
 
 .modal .contact-form {
   padding-top: 0px;
-  box-shadow: none; }
+  box-shadow: none;
+  position: static; }
+  .modal .contact-form .success-container {
+    position: absolute; }
 
 @media (min-width: 992px) {
   .modal .modal-header {
@@ -2918,6 +2925,7 @@ nav a {
     font-size: 18px; } }
 
 .contact-form {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2934,6 +2942,9 @@ nav a {
   .contact-form .message {
     width: 100%;
     margin-bottom: 25px; }
+  .contact-form .input-recaptcha {
+    width: 100%;
+    border-bottom: none; }
   .contact-form .validate-input {
     position: relative; }
   .contact-form .input-label {
@@ -3010,6 +3021,78 @@ nav a {
   .contact-form .alert-validate:hover:before {
     visibility: visible;
     opacity: 1; }
+  .contact-form .loader-container {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(85, 85, 85, 0.2); }
+    .contact-form .loader-container img {
+      height: 50px;
+      width: 50px; }
+
+.success-container {
+  color: #c99065;
+  z-index: 100;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(245, 242, 236, 0.9);
+  justify-content: center;
+  align-items: center; }
+
+.checkmark {
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both; }
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; }
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards; }
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes scale {
+  0%, 100% {
+    transform: none; }
+  50% {
+    transform: scale3d(1.1, 1.1, 1); } }
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142; } }
+
+.show-flex {
+  display: flex !important; }
 
 @media (min-width: 576px) {
   .contact-form {
@@ -3025,12 +3108,14 @@ nav a {
     .contact-form .input-container {
       margin-bottom: 65px; }
     .contact-form .input {
-      font-size: 18px; } }
+      font-size: 18px; }
+    .contact-form .input-recaptcha {
+      margin-bottom: 15px; } }
 
 @media (min-width: 992px) {
   .contact-form .input-container {
     width: 45%; }
-    .contact-form .input-container.message {
+    .contact-form .input-container.message, .contact-form .input-container.input-recaptcha {
       width: 100%; }
   .contact-form .input::placeholder {
     color: rgba(85, 85, 85, 0.5); } }

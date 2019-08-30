@@ -2,75 +2,79 @@ var $name = $('#input-name');
 var $email= $('#input-email');
 var $message = $('#input-message');
 var input = $('.validate-input .input');
-var allValidated;
-export function form(event) {
+import {validateRecaptcha, getRecaptcha} from './recaptcha.js';
+
+
+export function formSubmit(event) {
     event.preventDefault();
-    allValidated = true;
-    var data = {};
-
-    input.map(function(index,element){
-        data[element.name] = element.value.trim(); 
-        if(validate(element) === false){
-            showValidate(element);
-            allValidated = false;
-        }
+    input.each(function(){
+        $(this).on("focusin", function(){
+            hideInvalidMessage(this);
+        });
     });
-    focus();
-    if(allValidated){
-        postData(data);
-    }
-}
-function validate (input) {
-    if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-        if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-            return false;
-        }
-    }
-    else {
-        if($(input).val().trim() == '' || $(input).val().trim().length < 5){
-            return false;
-        }
-        return true;
+
+    var inputData = validatedData();
+
+    if(inputData && validateRecaptcha()){
+        inputData.recaptcha = getRecaptcha();
+        postData(inputData);
     }
 }
 
-function showValidate(input) {
+
+function validatedData(){
+    let data = {};
+    let hasIncompleteData = false;
+
+    $.each(input, (index, element) => {
+        if(validatedRegex(element) === false){
+            showInvalidMessage(element);
+            hasIncompleteData = true;
+            return null;
+        }
+        data[element.name] = element.value.trim(); 
+    });
+
+    return (hasIncompleteData) ? null : data;
+}
+function validatedRegex(input) { 
+    let regexString = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/;
+    let inputName = $(input).attr('type') || $(input).attr('name');
+    let inputValue = $(input).val().trim();
+
+    if((inputName == 'email' && inputValue.match(regexString) == null) || (inputValue == '' || inputValue.length < 5)) {
+            return false;
+    }
+    return true;
+}
+
+function showInvalidMessage(input) {
     $(input).parent().addClass('alert-validate');
 }
 
-function hideValidate(input) {
+function hideInvalidMessage(input) {
     $(input).parent().removeClass('alert-validate');
 }
 
 function postData(data){
+    $('.loader-container').toggleClass('show-flex');
+    // $('.success-container').toggleClass('show-flex');
     $.post( '/sendemail', data, function(res){
-        $name.val("");
-        $email.val("");
-        $message.val("");
-    });
-}
-    
-function focus(){
-    input.each(function(){
-
-        $(this).on("focusin", function(){
-           hideValidate(this);
-        });
-        // $(this).on("focusout", function(){
-        //     console.log(typeof this.name);
-        //     // console.log()
-        //     if(this.name == 'email'){
-        //         if(validate(this)){
-        //             return hideValidate(this);
-        //         }else{
-        //             return showValidate(this);
-        //         }
-        //     }else{
-        //         if(!validate(this)){
-        //             return showValidate(this);
-        //         }
-        //     }
-            
-        //  });
+        if(res === 'good'){
+            $('.loader-container').toggleClass('show-flex');
+            $('.success-container').toggleClass('show-flex');
+            setTimeout(function(){
+                $name.val("");
+                $email.val("");
+                $message.val(""); 
+                grecaptcha.reset(); 
+                $('.success-container').toggleClass('show-flex');
+                if($("#contact-modal").data('bs.modal')){
+                    $('#contact-modal').modal('hide');
+                }            
+            },3000);
+        }else{
+            alert('There was an error submiting your form. Please try again.');
+        };
     });
 }
