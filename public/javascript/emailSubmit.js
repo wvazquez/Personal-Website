@@ -38,17 +38,14 @@ function validatedData(){
     return (hasIncompleteData) ? null : data;
 }
 function validatedRegex(input) { 
-    if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
-        if($(input).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
+    let regexString = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/;
+    let inputName = $(input).attr('type') || $(input).attr('name');
+    let inputValue = $(input).val().trim();
+
+    if((inputName == 'email' && inputValue.match(regexString) == null) || (inputValue == '' || inputValue.length < 5)) {
             return false;
-        }
     }
-    else {
-        if($(input).val().trim() == '' || $(input).val().trim().length < 5){
-            return false;
-        }
-        return true;
-    }
+    return true;
 }
 
 function showInvalidMessage(input) {

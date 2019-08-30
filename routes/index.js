@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const config = require('../config');
-const nodemailer = require('nodemailer');
-const axios = require('axios')
+const sendemail = require('./sendemail');
 require('dotenv').config({});
 
 /* GET home page. */
@@ -31,65 +30,8 @@ router.get('/projects/:projectID', (req,res)=>{
     });
     res.json(project);
 });
-router.post('/recaptcha', (req,res)=>{
-  
-});
-router.post('/sendemail', function(req,res){
-  console.log('req.body', req.body);
 
-  $name = req.body.name;
-  $email = req.body.email;
-  $message = req.body.message;
-  $recaptcha = req.body.recaptcha;
-
-  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_KEY}&response=${$recaptcha}`;
-
-  axios.post(verifyURL).then(function(response){
-    // res.json(response.data);
-    if(response.data.success){
-      let mailerConfig = {    
-        host: process.env.MAILER_HOST,  
-        secure: false,
-        port: process.env.MAILER_PORT,
-        auth: {
-            user: process.env.AUTH_USER,
-            pass: process.env.AUTH_PASS
-        },
-        tls:{
-          rejectUnauthorized: false
-        }
-      };
-      let transporter = nodemailer.createTransport(mailerConfig);
-    
-      let mailOptions = {
-          from: mailerConfig.auth.user,
-          to: process.env.MAILER_TO,
-          subject: `${mailerConfig.auth.user} new e-mail`,
-          text: 
-          `From: ${$name} Email: ${$email} ,
-          ${$message}
-          `
-      };
-    
-      transporter.sendMail(mailOptions, function (error) {
-          if (error) {
-              res.send(error);
-    
-          } else {
-              res.send('good');
-          }
-      });
-    }else{
-        // console.log(data[error]);
-        // handleRecaptchaError(data[error]);
-        res.send("error");
-    }
-
-
-
-  });
-  
-});
+router.use('/sendemail', sendemail)
 
 
 module.exports = router;

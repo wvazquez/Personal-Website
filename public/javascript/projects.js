@@ -3,7 +3,6 @@ export function getProject(event){
         
     $.get(`/projects/${projectID}`, data => {
         setProject(data);
-        console.log(data);
         $('.project-overview').show(100);
         $('.project-container').css('left', '-50%');
     });
@@ -24,7 +23,6 @@ function setProject(data){
     const $content = $('.project-content');
     $content.html(""); //removes previously loaded data.
     data.assets.forEach(asset => {
-        console.log(asset);
         $('<img />').attr("src", asset.src)
                     .attr('alt', asset.title)
                     .appendTo($content);
