@@ -152,6 +152,54 @@ module.exports = {
                 },
             ]
         },
+        {
+            title: 'Sample project 7',
+            folder: 'project-7',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
+        },
+        {
+            title: 'Sample project 8',
+            folder: 'project-8',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
+        },
+        {
+            title: 'Sample project 9',
+            folder: 'project-9',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
+        },
+        {
+            title: 'Sample project 10',
+            folder: 'project-10',
+            bg_image:'',
+            assets: [
+                {
+                    title: '',
+                    src: '',
+                    desc: ''
+                },
+            ]
+        },
     ]
 
 };

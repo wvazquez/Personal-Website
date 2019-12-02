@@ -4,8 +4,8 @@
         
         <div class="project-container">
             <div class="project-thumbnails container">
-                {{#each projects}}
-                    <div class="project-unit" style="background: url(/images/work/{{folder}}/background.jpg) center center no-repeat">
+                {{#each projects as |project i|}}
+                    <div class="project-unit project{{i}}" style="background: url(/images/work/{{folder}}/background.jpg) center center">
                         <div class="project-overlay" id="{{folder}}">
                             <h3 class="title">{{title}}</h3>
                             <div class="icon"></div>
