@@ -66,8 +66,8 @@
     .back-arrow {
       position: absolute; 
       left: 0px;
-      height: 4em;
-      width: 4em;
+      height: 2em;
+      width: 2em;
       cursor: pointer;
       filter: opacity(75%);
       &:hover {
@@ -75,7 +75,6 @@
       }
     }
     #overview-title {
-      line-height: 2em;
       color: $color-accent-primary;
       font-weight: 300;
       font-size: 30px;
@@ -83,6 +82,7 @@
     }
     #overview-link {
       color: gray;
+      line-height: 2em;
     }
   }
   .project-content {
@@ -92,6 +92,12 @@
 
 @media (min-width: $sm) {
   .work {
+    .project-header {
+      .back-arrow {
+        height: 3em;
+        width: 3em;
+      }
+    }
     .projects-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -129,6 +135,12 @@
 }
 @media (min-width: $md) {
   .work {
+    .project-header {
+      .back-arrow {
+        height: 4em;
+        width: 4em;
+      }
+    }
     .projects-container {
       grid-template-columns: repeat(4, 1fr);
     }

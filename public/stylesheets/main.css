@@ -3294,24 +3294,27 @@ section.about {
     .work .project-header .back-arrow {
       position: absolute;
       left: 0px;
-      height: 4em;
-      width: 4em;
+      height: 2em;
+      width: 2em;
       cursor: pointer;
       filter: opacity(75%); }
       .work .project-header .back-arrow:hover {
         filter: opacity(100%); }
     .work .project-header #overview-title {
-      line-height: 2em;
       color: #c99065;
       font-weight: 300;
       font-size: 30px;
       text-transform: uppercase; }
     .work .project-header #overview-link {
-      color: gray; }
+      color: gray;
+      line-height: 2em; }
   .work .project-content {
     background: darkgray; }
 
 @media (min-width: 576px) {
+  .work .project-header .back-arrow {
+    height: 3em;
+    width: 3em; }
   .work .projects-container {
     grid-template-columns: repeat(2, 1fr); }
   .work .project:hover .overlay {
@@ -3336,6 +3339,9 @@ section.about {
     grid-row: 10/12; } }
 
 @media (min-width: 768px) {
+  .work .project-header .back-arrow {
+    height: 4em;
+    width: 4em; }
   .work .projects-container {
     grid-template-columns: repeat(4, 1fr); }
   .work .project-0 {
