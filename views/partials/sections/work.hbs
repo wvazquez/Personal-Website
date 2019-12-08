@@ -1,21 +1,21 @@
 <section class="work" id="work">
     <h2>Work</h2>
-    <div class="project">
-        
-        <div class="project-container">
-            <div class="project-thumbnails container">
+    <div class="slide">
+        <div class="slide-section">
+            <div class="projects-container container">
                 {{#each projects as |project i|}}
-                    <div class="project-unit project{{i}}" style="background: url(/images/work/{{folder}}/background.jpg) center center">
-                        <div class="project-overlay" id="{{folder}}">
-                            <h3 class="title">{{title}}</h3>
-                            <div class="icon"></div>
-                        </div>
+                <div class="project project-{{i}}"
+                    style="background: url(/images/work/{{folder}}/background.jpg) center center">
+                    <div class="overlay" id="{{folder}}">
+                        <h3>{{title}}</h3>
+                        <div class="icon"></div>
                     </div>
+                </div>
                 {{/each}}
-            </div> {{!-- /project-thumbnail /container --}}
-        </div> {{!-- /project-container --}}
-        
-        <div class="project-container">
+            </div>
+        </div>
+
+        <div class="slide-section">
             <div class="container">
                 <div class="project-overview">
                     <div class="project-header">
@@ -23,7 +23,7 @@
                         <h3 id="overview-title"></h3>
                         <a id="overview-link" target='_blank' href="">Visit Website</a>
                     </div>
-                    
+
                     <div class="project-content">
                         {{!-- 
 
@@ -32,10 +32,10 @@
 
                         --}}
                     </div>
-                </div> {{!-- /project-overview --}}
-            </div> {{!-- /container --}}
-        </div> {{!-- /project-container --}}  
-    </div> {{!-- /projects --}}
-    
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </section>

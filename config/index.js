@@ -42,7 +42,7 @@ module.exports = {
     ],
     projects: [
         {
-            title: 'Sample project 1',
+            title: 'ArchMedia Studios',
             folder: 'project-1',
             bg_image:'',
             url: 'http://www.google.com',
@@ -66,7 +66,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Sample project 2',
+            title: 'Jukebox',
             folder: 'project-2',
             bg_image:'',
             url: 'http://www.amazon.com',
@@ -89,7 +89,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Sample project 3',
+            title: 'Web-Bot',
             folder: 'project-3',
             bg_image:'',
             url: 'http://www.facebook.com',
@@ -117,7 +117,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Sample project 4',
+            title: 'Maze Game',
             folder: 'project-4',
             bg_image:'',
             assets: [
@@ -129,7 +129,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Sample project 5',
+            title: 'Draw IO',
             folder: 'project-5',
             bg_image:'',
             assets: [
