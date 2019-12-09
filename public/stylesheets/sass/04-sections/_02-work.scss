@@ -175,21 +175,20 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 2em;
+        margin-bottom: 3em;
+      }
+      .content:nth-child(even){
+        flex-direction: row-reverse;
       }
       .content-image{
         width: 40%;
-        border: 2px solid $color-accent-primary;
+        border: 1px solid $color-accent-primary;
         position: relative;
         img{
           position: relative;
           left: 1em;
-        }
-        
-      }
-      p{
-        // display: inline-block;
-        // width: 50%;
+          top: -1em;
+        }  
       }
     }
   }
