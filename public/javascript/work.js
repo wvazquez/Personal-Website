@@ -5,6 +5,7 @@ export function getProject(event){
     $.get(`/projects/${projectID}`, data => {
         setProject(data);
         $('.project-overview').show(100);
+        $('.projects-container').fadeOut(700);
         $('.slide-section').css('left', '-50%');
     });
 }
@@ -12,6 +13,7 @@ export function getProject(event){
 export function returnToProjectOverview(){
     $('.slide-section').css('left', 0);
     $('.project-overview').fadeOut(700);
+    $('.projects-container').fadeIn(700);
 }
 
 function setProject(data){
