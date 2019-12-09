@@ -3241,7 +3241,7 @@ section.about {
 .work {
   background-color: #e5eaee;
   overflow-x: hidden;
-  padding-bottom: 100px; }
+  padding-bottom: 25px; }
   .work .slide {
     font-family: "Raleway", sans-serif;
     width: 200%;
@@ -3278,7 +3278,6 @@ section.about {
       color: white;
       border: 3px solid white;
       padding: 0.75em;
-      font-weight: 100;
       text-transform: capitalize; }
     .work .overlay .icon {
       margin-top: 0.5em;
@@ -3294,8 +3293,8 @@ section.about {
     .work .project-header .back-arrow {
       position: absolute;
       left: 0px;
-      height: 2em;
-      width: 2em;
+      height: 2.5em;
+      width: 2.5em;
       cursor: pointer;
       filter: opacity(75%); }
       .work .project-header .back-arrow:hover {
@@ -3308,35 +3307,41 @@ section.about {
     .work .project-header #overview-link {
       color: gray;
       line-height: 2em; }
+  .work .project-content .content, .work .project-content .content-image {
+    text-align: center;
+    margin-bottom: 3em; }
   .work .project-content img {
     width: 100%; }
 
 @media (min-width: 576px) {
-  .work .project-header .back-arrow {
-    height: 3em;
-    width: 3em; }
-  .work .projects-container {
-    grid-template-columns: repeat(2, 1fr); }
-  .work .project:hover .overlay {
-    top: 0%; }
-  .work .overlay {
-    background-color: rgba(201, 144, 101, 0.82);
-    top: 100%; }
-  .work .project-content .content {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 3em; }
-  .work .project-content .content:nth-child(even) {
-    flex-direction: row-reverse; }
-  .work .project-content .content-image {
-    width: 40%;
-    border: 1px solid #c99065;
-    position: relative; }
-    .work .project-content .content-image img {
-      position: relative;
-      left: 1em;
-      top: -1em; } }
+  .work {
+    padding-bottom: 100px; }
+    .work .project-header .back-arrow {
+      height: 3em;
+      width: 3em; }
+    .work .projects-container {
+      grid-template-columns: repeat(2, 1fr); }
+    .work .project:hover .overlay {
+      top: 0%; }
+    .work .overlay {
+      background-color: rgba(201, 144, 101, 0.82);
+      top: 100%; }
+      .work .overlay h3 {
+        font-weight: 100; }
+    .work .project-content .content {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+    .work .project-content .content:nth-child(even) {
+      flex-direction: row-reverse; }
+    .work .project-content .content-image {
+      width: 40%;
+      border: 1px solid #c99065;
+      position: relative; }
+      .work .project-content .content-image img {
+        position: relative;
+        left: 1em;
+        top: -1em; } }
 
 @media (min-width: 576px) and (max-width: 768px) {
   .work .project-0,

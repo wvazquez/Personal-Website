@@ -1,7 +1,7 @@
 .work {
   background-color: $bg-color-primary;
   overflow-x: hidden;
-  padding-bottom: 100px;
+  padding-bottom: 25px;
   h2 {
     @extend %text-heading-secondary;
   }
@@ -46,7 +46,7 @@
       color: white;
       border: 3px solid white;
       padding: 0.75em;
-      font-weight: 100;
+      
       text-transform: capitalize;
     }
     .icon {
@@ -66,8 +66,8 @@
     .back-arrow {
       position: absolute; 
       left: 0px;
-      height: 2em;
-      width: 2em;
+      height: 2.5em;
+      width: 2.5em;
       cursor: pointer;
       filter: opacity(75%);
       &:hover {
@@ -86,7 +86,10 @@
     }
   }
   .project-content {
-    // background: darkgray;
+    .content, .content-image{
+      text-align: center;
+      margin-bottom: 3em;
+    }
     img{
       width: 100%;
     }
@@ -95,6 +98,7 @@
 
 @media (min-width: $sm) {
   .work {
+    padding-bottom: 100px;
     .project-header {
       .back-arrow {
         height: 3em;
@@ -112,13 +116,15 @@
     .overlay {
       background-color: transparentize($color-accent-primary, 0.18);
       top: 100%;
+      h3{
+        font-weight: 100;
+      }
     }
     .project-content {
       .content{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 3em;
       }
       .content:nth-child(even){
         flex-direction: row-reverse;
