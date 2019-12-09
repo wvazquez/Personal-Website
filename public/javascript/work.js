@@ -21,15 +21,13 @@ function setProject(data){
     // $('<a/>',{
     //     text: "Visit Website"
     // }).attr('href', data.url);
-    const $content = $('.project-content');
-    $content.html(""); //removes previously loaded data.
+    const $projectContent = $('.project-content');
+    $projectContent.html(""); //removes previously loaded data.
     data.assets.forEach(asset => {
-        $('<img />').attr("src", asset.src)
-                    .attr('alt', asset.title)
-                    .appendTo($content);
-
-        $( "<p/>", {
-            text: asset.desc,
-          }).appendTo($content);
+        let $content = $('<div></div>').addClass('content');
+        let $contentImage = $('<div></div>').addClass('content-image').append($('<img />').attr("src", asset.src).attr('alt', asset.title));
+        let $paragraph = $( "<p/>", {text: asset.desc});
+        $content.append($contentImage,$paragraph);
+        $projectContent.append($content);
     });
 }
