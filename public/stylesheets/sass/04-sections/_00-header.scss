@@ -1,51 +1,52 @@
-.header{
-    // overflow: hidden;
-    height: 80vh;
-    background-color: transparent;
-    color: white;
-    $h: &;
-    // background-color: #8EC5FC;
-    background:  linear-gradient(to top, rgba(55, 59, 68,0.5), rgba(66, 134, 244,0.5)), url('/images/backgrounds/coding.jpg') center center no-repeat;
-    background-size: cover;
-    &-container {
-        // z-index: 100;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        
-        #{$h}-content{
-            padding-left: 10%;
-            flex-grow: 10;
-            // height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            max-width: 55%;
-            #{$h}-phrase{
-                // font-family: 'Caveat', cursive; 
-                font-family: 'Cabin Sketch', cursive; 
-                font-weight: 400;
-                font-size: 40px;
-                font-weight: 700;
-                letter-spacing: 0.05em;
-                margin-bottom: 5px;
-                .keywords{                    
-                    color: $color-accent-secondary;
-                    font-weight: 700;
-                }
-            }
-            #{$h}-subphrase{
-                font-family: 'Caveat', cursive; 
-                // font-family: 'Cabin Sketch', cursive; 
-                font-size: 20px;
-                margin-top: 5px;
-                .keywords{                    
-                    color: $color-accent-secondary;
-                    font-weight: 700;
-                }       
-            }
-        }
-    }
-}
+.header {
+  // overflow: hidden;
+  height: 80vh;
+  position: relative;
+  background-color: transparent;
+  color: white;
+  $h: &;
+  // background-color: #8EC5FC;
+  background-color: rgba(0, 0, 0, 1);
+  // background:  linear-gradient(to top, rgba(55, 59, 68,0.5), rgba(66, 134, 244,0.5)), url('/images/backgrounds/coding.jpg') center center no-repeat;
+  background-size: cover;
+  &-container {
+    // z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 
+    #{$h}-content {
+      padding-left: 10%;
+      flex-grow: 10;
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 55%;
+      #{$h}-phrase {
+        // font-family: 'Caveat', cursive;
+        font-family: "Cabin Sketch", cursive;
+        font-weight: 400;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin-bottom: 5px;
+        .keywords {
+          // color: $color-accent-secondary;
+          font-weight: 700;
+        }
+      }
+      #{$h}-subphrase {
+        font-family: "Caveat", cursive;
+        // font-family: 'Cabin Sketch', cursive;
+        font-size: 20px;
+        margin-top: 5px;
+        .keywords {
+          color: $color-accent-secondary;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
